@@ -11,5 +11,6 @@
 	<classpathentry kind="src" path="java1018"/>
 	<classpathentry kind="src" path="java1021stream"/>
 	<classpathentry kind="src" path="java1022DesignPattern"/>
+	<classpathentry kind="src" path="java1022stream"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>
