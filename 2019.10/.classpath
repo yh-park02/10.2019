@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/JavaSE-1.8"/>
+	<classpathentry kind="src" path="1-2st.10"/>
+	<classpathentry kind="src" path="java1010UseOracle"/>
+	<classpathentry kind="src" path="java1011"/>
+	<classpathentry kind="src" path="java1014buy"/>
+	<classpathentry kind="src" path="mysql1015"/>
+	<classpathentry kind="src" path="java1016"/>
+	<classpathentry kind="src" path="java1017member"/>
+	<classpathentry kind="src" path="java1018"/>
+	<classpathentry kind="src" path="java1021stream"/>
+	<classpathentry kind="src" path="java1022DesignPattern"/>
+	<classpathentry kind="output" path="bin"/>
+</classpath>

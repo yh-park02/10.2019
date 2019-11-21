@@ -1,0 +1,1531 @@
+{\rtf1\ansi\ansicpg949\cocoartf2509
+\cocoatextscaling0\cocoaplatform0{\fonttbl\f0\fswiss\fcharset0 Helvetica;\f1\fnil\fcharset129 AppleSDGothicNeo-Regular;\f2\fswiss\fcharset0 Helvetica-Bold;
+\f3\fswiss\fcharset0 Helvetica-BoldOblique;\f4\fswiss\fcharset0 Helvetica-Oblique;}
+{\colortbl;\red255\green255\blue255;\red127\green0\blue85;\red63\green127\blue95;\red106\green62\blue62;
+\red42\green0\blue255;\red0\green0\blue192;\red100\green100\blue100;\red254\green209\blue207;\red255\green0\blue0;
+\red0\green104\blue218;\red0\green0\blue0;}
+{\*\expandedcolortbl;;\csgenericrgb\c49804\c0\c33333;\csgenericrgb\c24706\c49804\c37255;\csgenericrgb\c41569\c24314\c24314;
+\csgenericrgb\c16471\c0\c100000;\csgenericrgb\c0\c0\c75294;\csgenericrgb\c39216\c39216\c39216;\cssrgb\c100000\c85667\c84695;\csgenericrgb\c100000\c0\c0;
+\csgenericrgb\c0\c40784\c85490;\cssrgb\c0\c0\c0;}
+\paperw11900\paperh16840\margl1440\margr1440\vieww13960\viewh12240\viewkind0
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\partightenfactor0
+
+\f0\fs36 \cf0 10
+\f1 \'bf\'f9
+\f0  21
+\f1 \'c0\'cf
+\f0  
+\f1 \'bf\'f9\'bf\'e4\'c0\'cf \
+\
+**Java 1.8\'ba\'ce\'c5\'cd\'c0\'c7 \'bd\'ba\'c6\'ae\'b8\'b2 \
+1. Java.io \'c6\'d0\'c5\'b0\'c1\'f6\'bf\'a1\'bc\'ad \'b4\'d9\'b7\'e7\'b4\'f8 \'c0\'d4\'c3\'e2\'b7\'c2 \'b0\'fc\'b7\'c3 \'bd\'ba\'c6\'ae\'b8\'b2\
+=>\'bf\'dc\'ba\'ce\'bf\'cd \'c5\'eb\'bd\'c5\'c0\'bb \'c7\'cf\'b1\'e2 \'c0\'a7\'c7\'d8\'bc\'ad \'b8\'b8\'b5\'e7 \'c5\'eb\'b7\'ce \
+=>\'c0\'d4\'c3\'e2\'b7\'c2 \'bd\'ba\'c6\'ae\'b8\'b2\'b0\'fa \'b9\'d9\'c0\'cc\'c6\'ae \'b6\'c7\'b4\'c2 \'b9\'ae\'c0\'da \'b4\'dc\'c0\'a7 \'bd\'ba\'c6\'ae\'b8\'b2\'c0\'bb \'ba\'d0\'b7\'f9\'c7\'d8\'bc\'ad \'bb\'e7\'bf\'eb\
+\
+2. Java.util.stream \'c6\'d0\'c5\'b0\'c1\'f6\'bf\'a1\'bc\'ad \'b4\'d9\'b7\'e7\'b4\'c2 \'bd\'ba\'c6\'ae\'b8\'b2 \
+=>\'b5\'a5\'c0\'cc\'c5\'cd\'c0\'c7 \'c1\'fd\'c7\'d5\'c0\'bb \'c8\'bf\'c0\'b2\'c0\'fb\'c0\'b8\'b7\'ce \'b4\'d9\'b7\'e7\'b1\'e2 \'c0\'a7\'c7\'d8\'bc\'ad JDK1.8\'bf\'a1\'bc\'ad \'c3\'df\'b0\'a1\'b5\'c8 API\
+=>\'b1\'e2\'c1\'b8 API\'bf\'a1\'bc\'ad\'b4\'c2 Collection\'c0\'c7 \'b5\'a5\'c0\'cc\'c5\'cd\'b8\'a6 \'b4\'d9\'b7\'e7\'b0\'ed\'c0\'da \'c7\'cf\'b4\'c2 \'b0\'e6\'bf\'ec\'bf\'a1 \'b9\'dd\'b8\'f1\'b9\'ae\'c0\'bb \'b8\'b8\'b5\'e9\'be\'ee\'bc\'ad \'b5\'a5\'c0\'cc\'c5\'cd\'b8\'a6 \'c7\'cf\'b3\'aa\'be\'bf \'b2\'a8\'b3\'bd \'c8\'c4 \'c0\'db\'be\'f7\'c0\'bb \'bc\'f6\'c7\'e0\'c7\'cf\'b4\'c2 \'b8\'de\'bc\'d2\'b5\'e5\'bf\'a1 \'b4\'eb\'c0\'d4\'c7\'cf\'b4\'c2 \'b1\'b8\'c1\'b6\'c0\'cc\'b4\'d9.\
+=>stream api\'bf\'a1\'bc\'ad\'b4\'c2 \'b5\'a5\'c0\'cc\'c5\'cd\'b8\'a6 \'b2\'a8\'b3\'bb\'b4\'c2 \'c0\'db\'be\'f7\'c0\'bb \'bc\'f6\'c7\'e0\'c7\'cf\'b4\'c2 \'c4\'da\'b5\'e5\'b8\'a6 \'c7\'cf\'b3\'aa\'b7\'ce \'b9\'ad\'be\'ee\'bc\'ad \'bb\'e7\'bf\'eb\'c7\'d2 \'bc\'f6 \'c0\'d6\'b5\'b5\'b7\'cf \'c7\'d8\'c1\'d8\'b4\'d9\
+\
+
+\fs26 join\'b0\'fa set\
+2\'b0\'b3\'c0\'c7 \'c5\'d7\'c0\'cc\'ba\'ed\'c0\'bb \'c7\'cf\'b3\'aa\'c0\'c7 \'c5\'d7\'c0\'cc\'ba\'ed\'b7\'ce \'b8\'b8\'b5\'e5\'b4\'c2 \'c1\'a1\'c0\'ba \'b0\'b0\'c1\'f6\'b8\'b8 \
+join\'c0\'ba \'b1\'b8\'c1\'b6\'b0\'a1 \'b4\'d9\'b8\'a5 \'c5\'d7\'c0\'cc\'ba\'ed\'c0\'bb \'c7\'cf\'b3\'aa\'b7\'ce \'b8\'b8\'b5\'e9\'b0\'ed set\'c0\'ba \'b1\'b8\'c1\'b6\'b0\'a1 \'b0\'b0\'c0\'ba \'c5\'d7\'c0\'cc\'ba\'ed\'c0\'bb \'c7\'cf\'b3\'aa\'b7\'ce \'b8\'b8\'b5\'e5\'b4\'c2 \'b0\'cd\'c0\'cc\'b4\'d9. 
+\fs36 \
+\
+\
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\partightenfactor0
+\cf0 [\'bd\'c7\'bd\'c0] \'b1\'e2\'c1\'b8 \'c4\'c3\'b7\'ba\'bc\'c7\'c0\'bb \'b4\'d9\'b7\'e7\'b4\'c2 \'b9\'e6\'bd\'c4\'b0\'fa\'c0\'c7 \'c2\'f7\'c0\'cc \
+\pard\pardeftab720\partightenfactor0
+
+\f2\b \cf2 package
+\f0\b0 \cf0  java1021stream;\
+\
+
+\f2\b \cf2 import
+\f0\b0 \cf0  \ul java.util.ArrayList\ulnone ;\
+
+\f2\b \cf2 import
+\f0\b0 \cf0  java.util.Arrays;\
+
+\f2\b \cf2 import
+\f0\b0 \cf0  \ul java.util.Iterator\ulnone ;\
+
+\f2\b \cf2 import
+\f0\b0 \cf0  \ul java.util.List\ulnone ;\
+
+\f2\b \cf2 import
+\f0\b0 \cf0  java.util.stream.Stream;\
+\
+\cf3 //
+\f1 \'c4\'c3\'b7\'ba\'bc\'c7\'c0\'c7
+\f0  
+\f1 \'b4\'d9\'be\'e7\'c7\'d1
+\f0  
+\f1 \'c1\'a2\'b1\'d9
+\f0  \cf0 \
+
+\f2\b \cf2 public
+\f0\b0 \cf0  
+\f2\b \cf2 class
+\f0\b0 \cf0  StreamMain1 \{\
+\
+	
+\f2\b \cf2 public
+\f0\b0 \cf0  
+\f2\b \cf2 static
+\f0\b0 \cf0  
+\f2\b \cf2 void
+\f0\b0 \cf0  main(String[] \cf4 args\cf0 ) \{\
+		\cf3 /*\cf0 \
+\cf3 		List<String> list = new ArrayList<>();\cf0 \
+\cf3 		list.add("
+\f1 \'be\'c6\'c0\'cc\'b8\'b0
+\f0 ");\cf0 \
+\cf3 		list.add("
+\f1 \'bf\'b9\'c1\'f6
+\f0 ");\cf0 \
+\cf3 		list.add("
+\f1 \'c1\'f6\'bc\'f6
+\f0 ");\cf0 \
+\cf3 		*/\cf0 \
+		String [] \cf4 list\cf0  = \{\cf5 "
+\f1 \'be\'c6\'c0\'cc\'b8\'b0
+\f0 "\cf0 ,\cf5 "
+\f1 \'bc\'f6\'c1\'f6
+\f0 "\cf0 , \cf5 "
+\f1 \'bc\'b3\'c7\'f6
+\f0 "\cf0 \};\
+		\
+		\cf3 //
+\f1 \'c0\'cf\'b9\'dd
+\f0  
+\f1 \'b9\'dd\'ba\'b9\'b9\'ae\'c0\'bb
+\f0  
+\f1 \'c0\'cc\'bf\'eb\'c7\'d8\'bc\'ad
+\f0  
+\f1 \'c1\'a2\'b1\'d9
+\f0  \cf0 \
+		
+\f2\b \cf2 int
+\f0\b0 \cf0  \cf4 i\cf0  = 0;\
+		
+\f2\b \cf2 int
+\f0\b0 \cf0  \cf4 len\cf0  = \cf4 list\cf0 .\cf6 length\cf0 ;\
+		
+\f2\b \cf2 while
+\f0\b0 \cf0 (\cf4 i\cf0  < \cf4 len\cf0 ) \{\
+			\cf3 //
+\f1 \'b5\'a5\'c0\'cc\'c5\'cd\'b8\'a6
+\f0  
+\f1 \'b0\'a1\'c1\'ae\'bf\'c0\'b1\'e2
+\f0 \cf0 \
+			String \cf4 item\cf0  = \cf4 list\cf0 [\cf4 i\cf0 ];\
+			\cf3 //
+\f1 \'b0\'a1\'c1\'ae\'bf\'c2
+\f0  
+\f1 \'b5\'a5\'c0\'cc\'c5\'cd\'b8\'a6
+\f0  
+\f1 \'b0\'a1\'c1\'f6\'b0\'ed
+\f0  
+\f1 \'c0\'db\'be\'f7
+\f0  - 
+\f1 \'c3\'e2\'b7\'c2
+\f0 \cf0 \
+			System.
+\f3\i\b \cf6 out
+\f0\i0\b0 \cf0 .printf(\cf5 "%s\\n"\cf0 , \cf4 item\cf0 );\
+			\cf3 //
+\f1 \'c0\'ce\'b5\'a6\'bd\'ba
+\f0  
+\f1 \'ba\'af\'bc\'f6
+\f0  
+\f1 \'c1\'f5\'b0\'a8
+\f0 \cf0 \
+			\cf4 i\cf0  = \cf4 i\cf0  + 1;\
+		\}\
+		\
+		System.
+\f3\i\b \cf6 out
+\f0\i0\b0 \cf0 .printf(\cf5 "------------------------------\\n"\cf0 );\
+		\cf3 //iterator(cursor - 
+\f1 \'b9\'dd\'ba\'b9\'c0\'da
+\f0 )\cf0 \
+		\cf3 //
+\f1 \'b5\'a5\'c0\'cc\'c5\'cd\'b8\'a6
+\f0  
+\f1 \'b0\'a1\'c1\'ae\'bf\'c2
+\f0  
+\f1 \'c0\'a7\'c4\'a1\'bf\'a1
+\f0  
+\f1 \'b4\'eb\'b1\'e2\'c7\'cf\'b0\'ed
+\f0  
+\f1 \'c0\'d6\'b4\'d9\'b0\'a1
+\f0  
+\f1 \'b4\'d9\'c0\'bd
+\f0  
+\f1 \'b5\'a5\'c0\'cc\'c5\'cd\'b8\'a6
+\f0  
+\f1 \'c3\'a3\'be\'c6\'b0\'a1\'b4\'c2
+\f0  
+\f1 \'b9\'e6\'b9\'fd
+\f0 \cf0 \
+		\cf3 //
+\f1 \'b9\'e8\'bf\'ad\'c0\'ba
+\f0  
+\f1 \'bb\'e7\'bf\'eb
+\f0  
+\f1 \'b8\'f8\'c7\'d4
+\f0 \cf0 \
+		\cf3 /*\cf0 \
+\cf3 		Iterator <String> iterator = list.iterator();\cf0 \
+\cf3 		while(iterator.hasNext()) \{\cf0 \
+\cf3 			String next = iterator.next();\cf0 \
+\cf3 			System.out.printf("%s\\n", next);\cf0 \
+\cf3 		\}\cf0 \
+\cf3 		*/\cf0 \
+		\
+		System.
+\f3\i\b \cf6 out
+\f0\i0\b0 \cf0 .printf(\cf5 "------------------------------\\n"\cf0 );\
+		\cf3 //
+\f1 \'c0\'a7\'c0\'c7
+\f0  
+\f1 \'b9\'e6\'b9\'fd\'c0\'ba
+\f0  
+\f1 \'c0\'fc\'bf\'a1
+\f0  
+\f1 \'bb\'e7\'bf\'eb\'c7\'cf\'b4\'f8
+\f0  
+\f1 \'b9\'e6\'bd\'c4
+\f0 \cf0 \
+		\cf3 //
+\f1 \'c3\'d6\'b1\'d9\'bf\'a1\'b4\'c2
+\f0  
+\f1 \'c0\'a7\'c0\'c7
+\f0  
+\f1 \'b9\'e6\'bd\'c4\'c0\'bb
+\f0  
+\f1 \'b0\'b3\'bc\'b1\'c7\'d8\'bc\'ad
+\f0  Fast Enumeration 
+\f1 \'c1\'a6\'b0\'f8
+\f0  \cf0 \
+		\cf3 //
+\f1 \'be\'f0\'be\'ee\'bf\'a1
+\f0  
+\f1 \'b5\'fb\'b6\'f3\'bc\'ad
+\f0  Map
+\f1 \'b5\'b5
+\f0  
+\f1 \'c0\'cc
+\f0  
+\f1 \'b9\'e6\'bd\'c4\'c0\'cc
+\f0  
+\f1 \'b0\'a1\'b4\'c9\'c7\'cf\'b4\'d9
+\f0 . \cf0 \
+		
+\f2\b \cf2 for
+\f0\b0 \cf0 (String \cf4 temp\cf0  : \cf4 list\cf0 ) \{\
+			System.
+\f3\i\b \cf6 out
+\f0\i0\b0 \cf0 .printf(\cf5 "%s\\n"\cf0 , \cf4 temp\cf0 );\
+		\}\
+		\
+		System.
+\f3\i\b \cf6 out
+\f0\i0\b0 \cf0 .printf(\cf5 "------------------------------\\n"\cf0 );\
+		\cf3 //
+\f1 \'c0\'a7\'c0\'c7
+\f0  
+\f1 \'b9\'ae\'c0\'e5\'c0\'bb
+\f0  
+\f1 \'c1\'b6\'b1\'dd
+\f0  
+\f1 \'b4\'f5
+\f0  
+\f1 \'b0\'a3\'b0\'e1\'c7\'cf\'b0\'d4
+\f0  
+\f1 \'c0\'db\'bc\'ba
+\f0  \cf0 \
+		Stream <String> \cf4 stream\cf0  = Arrays.
+\f4\i stream
+\f0\i0 (\cf4 list\cf0 );\
+		\cf4 stream\cf0 .forEach(\cf4 name\cf0  -> System.
+\f3\i\b \cf6 out
+\f0\i0\b0 \cf0 .println(\cf4 name\cf0 ));\
+		\
+		\
+		\
+		\
+	\}\
+\
+\}\
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\partightenfactor0
+
+\f1 \cf0 \
+\
+**\'bd\'ba\'c6\'ae\'b8\'b2\'c0\'c7 \'c6\'af\'c2\'a1\
+1. \'bd\'ba\'c6\'ae\'b8\'b2\'c0\'ba \'b5\'a5\'c0\'cc\'c5\'cd \'bf\'f8\'ba\'bb\'c0\'bb \'ba\'af\'b0\'e6\'c7\'cf\'c1\'f6 \'be\'ca\'b4\'c2\'b4\'d9.\
+\'c1\'df\'b0\'a3\'b0\'e1\'b0\'fa\'b8\'a6 \'b9\'e8\'bf\'ad\'c0\'cc\'b3\'aa \'b8\'ae\'bd\'ba\'c6\'ae\'b8\'a6 \'c0\'cc\'bf\'eb\'c7\'d8\'bc\'ad \'c0\'fa\'c0\'e5\'c7\'d2 \'bc\'f6 \'c0\'d6\'b4\'d9.\
+\
+2.\'bd\'ba\'c6\'ae\'b8\'b2\'c0\'ba \'c0\'cf\'c8\'b8\'bf\'eb\'c0\'cc\'b4\'d9.\
+=>\'c7\'d1 \'b9\'f8 \'bb\'e7\'bf\'eb\'c7\'cf\'b0\'ed \'b3\'aa\'b8\'e9 \'b4\'d9\'c0\'bd\'bf\'a1 \'bb\'e7\'bf\'eb\'c7\'d2 \'b6\'a7\'b4\'c2 \'c0\'e7\'bb\'fd\'bc\'ba\'c0\'bb \'c7\'d8\'bc\'ad \'bb\'e7\'bf\'eb\'c7\'d8\'be\'df \'c7\'d1\'b4\'d9.\
+\
+3.\'bd\'ba\'c6\'ae\'b8\'b2\'c0\'ba \'b3\'bb\'ba\'ce\'c0\'fb\'c0\'b8\'b7\'ce \'b9\'dd\'ba\'b9\'b9\'ae\'c0\'bb \'b8\'b8\'b5\'e9\'be\'ee\'bc\'ad \'c3\'b3\'b8\'ae\'c7\'d1\'b4\'d9\
+\
+4. \'b4\'d9\'be\'e7\'c7\'d1 \'c1\'df\'b0\'a3\'bf\'ac\'bb\'ea\'c0\'da(\'b5\'a5\'c0\'cc\'c5\'cd \'c0\'fc\'c3\'b3\'b8\'ae - \'ba\'af\'c8\'af, \'c7\'ca\'c5\'cd\'b6\'fb, \'c1\'a4\'b7\'c4)\'bf\'cd \'c3\'d6\'c1\'be\'bf\'ac\'bb\'ea(\'c1\'fd\'b0\'e8-\'b9\'dd\'ba\'b9\'bc\'f6\'c7\'e0,\'b0\'b3\'bc\'f6,\'c6\'f2\'b1\'d5.\'c7\'d5\'b0\'e8,\'c3\'d6\'b4\'eb,\'c3\'d6\'bc\'d2)\'c0\'bb \'c1\'a6\'b0\'f8\'c7\'d1\'b4\'d9.\
+\
+5.\'c1\'f6\'bf\'ac\'b5\'c8 \'bf\'ac\'bb\'ea\'c0\'bb \'bc\'f6\'c7\'e0\'c7\'d1\'b4\'d9.\
+=>\'c1\'df\'b0\'a3\'bf\'ac\'bb\'ea\'c0\'c7 \'b0\'e6\'bf\'ec \'c8\'a3\'c3\'e2\'c7\'d2\'b6\'a7 \'bc\'f6\'c7\'e0\'c7\'cf\'b4\'c2 \'b0\'cd\'c0\'cc \'be\'c6\'b4\'cf\'b0\'ed \'c3\'d6\'c1\'be \'bf\'ac\'bb\'ea\'c0\'bb \'c7\'cf\'b1\'e2 \'c1\'f7\'c0\'fc\'bf\'a1 \'bc\'f6\'c7\'e0\'c7\'d1\'b4\'d9. \
+\
+6.\'ba\'b4\'b7\'c4\'c3\'b3\'b8\'ae\'b8\'a6 \'bd\'b1\'b0\'d4 \'b1\'b8\'c7\'f6\'c7\'d1\'b4\'d9.(\'c3\'d6\'b4\'eb\'c0\'e5\'c1\'a1)\
+\
+**\'bd\'ba\'c6\'ae\'b8\'b2\'c0\'c7 \'c1\'be\'b7\'f9 \
+Stream : Generic \'bb\'e7\'bf\'eb, IntStream, LongStream, DoubleStream\
+\
+**\'bd\'ba\'c6\'ae\'b8\'b2 \'bb\'fd\'bc\'ba \
+1.\'c4\'c3\'b7\'ba\'bc\'c7\'c0\'bb \'c0\'cc\'bf\'eb : stream() \'c0\'cc\'b6\'f3\'b4\'c2 \'b8\'de\'bc\'d2\'b5\'e5\'b8\'b8 \'c8\'a3\'c3\'e2\'c7\'cf\'b8\'e9 \'b8\'ae\'c5\'cf\'b5\'c8\'b4\'d9. \
+\
+2.\'b9\'e8\'bf\'ad\'c0\'bb \'c0\'cc\'bf\'eb : Arrays.stream(\'b9\'e8\'bf\'ad)\
+\
+3.\'b7\'a3\'b4\'fd\'c7\'d1 \'bd\'ba\'c6\'ae\'b8\'b2 \'bb\'fd\'bc\'ba : Random.doubles(), Random.ints(), Random.longs() -\'bb\'e7\'bf\'eb\'c7\'cf\'b0\'d4 \'b5\'c8\'b4\'d9\'b8\'e9 \'b5\'a5\'c0\'cc\'c5\'cd\'ba\'d0\'bc\'ae\'c2\'ca \
+\
+4.\'c1\'a4\'bc\'f6 \'b9\'fc\'c0\'a7\'b8\'a6 \'c0\'cc\'bf\'eb\'c7\'d1 \'bb\'fd\'bc\'ba : IntStream.range(int, int), LongStream.range(long, long)\
+\
+5.\'c6\'c4\'c0\'cf \'b0\'e6\'b7\'ce\'b8\'a6 \'c0\'cc\'bf\'eb\'c7\'d1 \'bb\'fd\'bc\'ba : Files.list(Path)\
+\
+**\'c1\'df\'b0\'a3 \'bf\'ac\'bb\'ea\
+=> \'b5\'a5\'c0\'cc\'c5\'cd \'c0\'fc\'c3\'b3\'b8\'ae\'b8\'a6 \'c0\'a7\'c7\'d1 \'bf\'ac\'bb\'ea \
+=> \'b5\'a5\'c0\'cc\'c5\'cd\'b8\'a6 \'c1\'d9\'c0\'ce\'b4\'d9\'b0\'ed \'c7\'cf\'b0\'ed Redustion \'c0\'cc\'b6\'f3\'b0\'ed\'b5\'b5 \'c7\'d1\'b4\'d9. \
+(Map - Reduce\'b6\'f3\'b0\'ed \'c7\'d2\'b6\'a7 Reduce)\
+=>\'ba\'af\'c8\'af, \'c7\'ca\'c5\'cd\'b8\'b5, \'c1\'a4\'b7\'c4, \'b1\'d7\'b7\'ec\'bf\'cd \'b5\'ee\'c0\'cc \'bf\'a9\'b1\'e2\'bf\'a1 \'c7\'d8\'b4\'e7\'b5\'c8\'b4\'d9. \
+=>\'c1\'df\'b0\'a3 \'bf\'ac\'bb\'ea \'b8\'de\'bc\'d2\'b5\'e5\'b4\'c2 \'bf\'a9\'b7\'af\'b9\'f8 \'bf\'ac\'bc\'d3\'c7\'d8\'bc\'ad \'bb\'e7\'bf\'eb\'c0\'cc \'b0\'a1\'b4\'c9\'c7\'cf\'b4\'d9.\
+=>\'c3\'d6\'c1\'be\'bf\'ac\'bb\'ea \'b8\'de\'bc\'d2\'b5\'e5\'b0\'a1 \'b3\'aa\'bf\'cd\'be\'df \'b0\'e1\'b0\'fa\'b4\'c2 \'c8\'ae\'c0\'ce\'c0\'cc \'b0\'a1\'b4\'c9\'c7\'cf\'b4\'d9.\
+\
+1.\'c7\'ca\'c5\'cd\'b8\'b5 \
+1)skip(long n) : n\'b0\'b3 \'b8\'b8\'c5\'ad \'b0\'c7\'b3\'ca \'b6\'d9\'b4\'c2 \'b8\'de\'bc\'d2\'b5\'e5\
+2)limit(long n) : n\'b0\'b3 \'b8\'b8\'c5\'ad\'b8\'b8 \'c3\'df\'c3\'e2\'c7\'cf\'b4\'c2 \'b8\'de\'bc\'d2\'b5\'e5\
+3)distinct() : \'c1\'df\'ba\'b9\'c0\'bb \'c1\'a6\'b0\'c5\'c7\'cf\'b4\'c2 \'b8\'de\'bc\'d2\'b5\'e5\'c0\'ce\'b5\'a5 equals \'b8\'de\'bc\'d2\'b5\'e5\'b8\'a6 \'c0\'cc\'bf\'eb\
+4)filter(\'b8\'c5\'b0\'b3\'ba\'af\'bc\'f6\'b0\'a1 1\'b0\'b3\'c0\'cc\'b0\'ed boolean\'c0\'bb \'b8\'ae\'c5\'cf\'c7\'cf\'b4\'c2 \'b6\'f7\'b4\'d9\'bd\'c4) : \'b6\'f7\'b4\'d9\'bd\'c4\'bf\'a1 \'b8\'f0\'b5\'e7 \'b5\'a5\'c0\'cc\'c5\'cd\'b8\'a6 \'c7\'cf\'b3\'aa\'be\'bf \'b4\'eb\'c0\'d4\'c7\'d8\'bc\'ad true\'b0\'a1 \'b8\'ae\'c5\'cf\'b5\'c7\'b4\'c2 \'b5\'a5\'c0\'cc\'c5\'cd\'b8\'b8 \'c3\'df\'c3\'e2\
+\
+[\'bd\'c7\'bd\'c01] \'c7\'ca\'c5\'cd\'b8\'b5 \'b0\'fc\'b7\'c3 \'b8\'de\'bc\'d2\'b5\'e5 \'bb\'e7\'bf\'eb \
+\pard\pardeftab720\partightenfactor0
+
+\f2\b \cf2 package
+\f0\b0 \cf0  java1021stream;\
+\
+
+\f2\b \cf2 import
+\f0\b0 \cf0  java.util.Arrays;\
+
+\f2\b \cf2 import
+\f0\b0 \cf0  java.util.stream.Stream;\
+\
+
+\f2\b \cf2 public
+\f0\b0 \cf0  
+\f2\b \cf2 class
+\f0\b0 \cf0  ReduceMain1 \{\
+\
+	
+\f2\b \cf2 public
+\f0\b0 \cf0  
+\f2\b \cf2 static
+\f0\b0 \cf0  
+\f2\b \cf2 void
+\f0\b0 \cf0  main(String[] \cf4 args\cf0 ) \{\
+		\cf3 //
+\f1 \'b9\'ae\'c0\'da\'bf\'ad
+\f0  
+\f1 \'b9\'e8\'bf\'ad
+\f0  
+\f1 \'bb\'fd\'bc\'ba
+\f0  \cf0 \
+		String [] \cf4 ar\cf0  = \{\cf5 "SES"\cf0 , \cf5 "
+\f1 \'c7\'ce\'c5\'ac
+\f0 "\cf0 , \cf5 "
+\f1 \'bf\'f8\'b4\'f5\'b0\'c9\'bd\'ba
+\f0 "\cf0 , \cf5 "
+\f1 \'bc\'d2\'b3\'e0\'bd\'c3\'b4\'eb
+\f0 "\cf0 , \
+				\cf5 "
+\f1 \'b7\'b9\'b5\'e5\'ba\'a7\'ba\'aa
+\f0 "\cf0 , \cf5 "
+\f1 \'c6\'ae\'bf\'cd\'c0\'cc\'bd\'ba
+\f0 "\cf0 , \cf5 "itzy"\cf0 , \cf5 "
+\f1 \'bc\'d2\'b3\'e0\'bd\'c3\'b4\'eb
+\f0 "\cf0 \};\
+	\
+		\cf3 //
+\f1 \'b9\'e8\'bf\'ad\'c0\'bb
+\f0  
+\f1 \'c0\'cc\'bf\'eb\'c7\'d8\'bc\'ad
+\f0  Stream
+\f1 \'c0\'bb
+\f0  
+\f1 \'bb\'fd\'bc\'ba
+\f0  \cf0 \
+		Stream <String> \cf4 \ul \ulc4 stream\cf0 \ulnone  = Arrays.
+\f4\i stream
+\f0\i0 (\cf4 ar\cf0 );\
+		\
+		\cf3 //
+\f1 \'c1\'df\'ba\'b9\'c0\'bb
+\f0  
+\f1 \'c1\'a6\'b0\'c5
+\f0  \cf0 \
+		\cf3 //stream.distinct().forEach(name -> System.out.println(name));\cf0 \
+		\
+		\cf3 //stream.skip(2).limit(2).forEach(name -> System.out.println(name));\cf0 \
+		\
+		\cf3 //
+\f1 \'bf\'f8\'c7\'cf\'b4\'c2
+\f0  
+\f1 \'b0\'b3\'bc\'f6\'b8\'b8\'c5\'ad
+\f0  
+\f1 \'b0\'c7\'b3\'ca\'b6\'d9\'be\'ee
+\f0  
+\f1 \'ba\'b8\'b1\'e2
+\f0  \cf0 \
+		
+\f2\b \cf2 int
+\f0\b0 \cf0  \cf4 len\cf0  = \cf4 ar\cf0 .\cf6 length\cf0 /4 +1;\
+		
+\f2\b \cf2 for
+\f0\b0 \cf0 (
+\f2\b \cf2 int
+\f0\b0 \cf0  \cf4 i\cf0 =0; \cf4 i\cf0 <\cf4 len\cf0 ; \cf4 i\cf0 =\cf4 i\cf0 +1) \{\
+			Stream <String> \cf4 imsi\cf0  = Arrays.
+\f4\i stream
+\f0\i0 (\cf4 ar\cf0 );\
+			\cf4 imsi\cf0 .skip(\cf4 i\cf0 *4).limit(4).forEach(\cf4 name\cf0  -> System.
+\f3\i\b \cf6 out
+\f0\i0\b0 \cf0 .println(\cf4 name\cf0 ));\
+			
+\f2\b \cf2 try
+\f0\b0 \cf0  \{\
+				Thread.
+\f4\i sleep
+\f0\i0 (3000);\
+			\}
+\f2\b \cf2 catch
+\f0\b0 \cf0 (Exception \cf4 e\cf0 ) \{\}	\
+		\}\
+		\
+		\
+	\}\
+\
+\}\
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\partightenfactor0
+
+\f1 \cf0 \
+[\'bd\'c7\'bd\'c02]DTO\'c5\'ac\'b7\'a1\'bd\'ba\'b8\'a6 \'bb\'fd\'bc\'ba\'c7\'d8\'bc\'ad \'bd\'ba\'c6\'ae\'b8\'b2\'c0\'c7 \'c7\'ca\'c5\'cd\'b8\'b5 \'b8\'de\'bc\'d2\'b5\'e5 \'bb\'e7\'bf\'eb\
+=>DTO\'c5\'ac\'b7\'a1\'bd\'ba \'bb\'fd\'bc\'ba(Store)\
+\pard\pardeftab720\partightenfactor0
+
+\f2\b \cf2 package
+\f0\b0 \cf0  java1021stream;\
+\
+
+\f2\b \cf2 public
+\f0\b0 \cf0  
+\f2\b \cf2 class
+\f0\b0 \cf0  Store \{\
+	\cf3 //
+\f1 \'b0\'a1\'b0\'d4\'b9\'f8\'c8\'a3
+\f0 , 
+\f1 \'c0\'cc\'b8\'a7
+\f0 , 
+\f1 \'b4\'f1\'b1\'db
+\f0  
+\f1 \'bc\'f6\'b8\'a6
+\f0  
+\f1 \'c0\'fa\'c0\'e5\'c7\'d2
+\f0  
+\f1 \'ba\'af\'bc\'f6
+\f0 \cf0 \
+	
+\f2\b \cf2 private
+\f0\b0 \cf0  
+\f2\b \cf2 int
+\f0\b0 \cf0  \cf6 num\cf0 ;\
+	
+\f2\b \cf2 private
+\f0\b0 \cf0  String \cf6 name\cf0 ;\
+	
+\f2\b \cf2 private
+\f0\b0 \cf0  
+\f2\b \cf2 int
+\f0\b0 \cf0  \cf6 replyCnt\cf0 ;\
+	\
+	
+\f2\b \cf2 public
+\f0\b0 \cf0  Store() \{\
+		
+\f2\b \cf2 super
+\f0\b0 \cf0 ();\
+	\}\
+	\
+	
+\f2\b \cf2 public
+\f0\b0 \cf0  Store(
+\f2\b \cf2 int
+\f0\b0 \cf0  \cf4 num\cf0 , String \cf4 name\cf0 , 
+\f2\b \cf2 int
+\f0\b0 \cf0  \cf4 replyCnt\cf0 ) \{\
+		
+\f2\b \cf2 super
+\f0\b0 \cf0 ();\
+		
+\f2\b \cf2 this
+\f0\b0 \cf0 .\cf6 num\cf0  = \cf4 num\cf0 ;\
+		
+\f2\b \cf2 this
+\f0\b0 \cf0 .\cf6 name\cf0  = \cf4 name\cf0 ;\
+		
+\f2\b \cf2 this
+\f0\b0 \cf0 .\cf6 replyCnt\cf0  = \cf4 replyCnt\cf0 ;\
+	\}\
+	\
+	\
+	
+\f2\b \cf2 public
+\f0\b0 \cf0  
+\f2\b \cf2 int
+\f0\b0 \cf0  getNum() \{\
+		
+\f2\b \cf2 return
+\f0\b0 \cf0  \cf6 num\cf0 ;\
+	\}\
+	
+\f2\b \cf2 public
+\f0\b0 \cf0  
+\f2\b \cf2 void
+\f0\b0 \cf0  setNum(
+\f2\b \cf2 int
+\f0\b0 \cf0  \cf4 num\cf0 ) \{\
+		
+\f2\b \cf2 this
+\f0\b0 \cf0 .\cf6 num\cf0  = \cf4 num\cf0 ;\
+	\}\
+	
+\f2\b \cf2 public
+\f0\b0 \cf0  String getName() \{\
+		
+\f2\b \cf2 return
+\f0\b0 \cf0  \cf6 name\cf0 ;\
+	\}\
+	
+\f2\b \cf2 public
+\f0\b0 \cf0  
+\f2\b \cf2 void
+\f0\b0 \cf0  setName(String \cf4 name\cf0 ) \{\
+		
+\f2\b \cf2 this
+\f0\b0 \cf0 .\cf6 name\cf0  = \cf4 name\cf0 ;\
+	\}\
+	
+\f2\b \cf2 public
+\f0\b0 \cf0  
+\f2\b \cf2 int
+\f0\b0 \cf0  getReplyCnt() \{\
+		
+\f2\b \cf2 return
+\f0\b0 \cf0  \cf6 replyCnt\cf0 ;\
+	\}\
+	
+\f2\b \cf2 public
+\f0\b0 \cf0  
+\f2\b \cf2 void
+\f0\b0 \cf0  setReplyCnt(
+\f2\b \cf2 int
+\f0\b0 \cf0  \cf4 replyCnt\cf0 ) \{\
+		
+\f2\b \cf2 this
+\f0\b0 \cf0 .\cf6 replyCnt\cf0  = \cf4 replyCnt\cf0 ;\
+	\}\
+	\cf7 @Override\cf0 \
+	
+\f2\b \cf2 public
+\f0\b0 \cf0  String toString() \{\
+		
+\f2\b \cf2 return
+\f0\b0 \cf0  \cf5 "Store [num="\cf0  + \cf6 num\cf0  + \cf5 ", name="\cf0  + \cf6 name\cf0  + \cf5 ", replyCnt="\cf0  + \cf6 replyCnt\cf0  + \cf5 "]"\cf0 ;\
+	\}	\
+\}\
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\partightenfactor0
+
+\f1 \cf0 \
+=>main \'b8\'de\'bc\'d2\'b5\'e5\'b8\'a6 \'bc\'d2\'c0\'af\'c7\'d1 \'c5\'ac\'b7\'a1\'bd\'ba\'b8\'a6 \'bb\'fd\'bc\'ba\'c7\'cf\'b4\'c2 \'c5\'d7\'bd\'ba\'c6\'ae \
+Filter \'b8\'de\'bc\'d2\'b5\'e5\'c0\'c7 \'b8\'c5\'b0\'b3\'ba\'af\'bc\'f6\'b4\'c2 \'b8\'c5\'b0\'b3\'ba\'af\'bc\'f6\'b0\'a1 1\'b0\'b3\'c0\'cc\'b0\'ed boolean\'c0\'bb \'b8\'ae\'c5\'cf\'c7\'cf\'b4\'c2 \'b6\'f7\'b4\'d9\'bd\'c4\
+(\'b8\'c5\'b0\'b3\'ba\'af\'bc\'f6) -> \{\
+	\'c0\'db\'be\'f7\
+	return true \'b6\'c7\'b4\'c2 false;\
+\}\
+\
+\'b8\'c5\'b0\'b3\'ba\'af\'bc\'f6\'b4\'c2 \'bd\'ba\'c6\'ae\'b8\'b2\'c0\'c7 \'bf\'e4\'bc\'d2\'b0\'a1 \'bc\'f8\'bc\'ad\'b4\'eb\'b7\'ce \'b4\'eb\'c0\'d4\'b5\'c8\'b4\'d9. \
+\pard\pardeftab720\partightenfactor0
+
+\f2\b \cf2 package
+\f0\b0 \cf0  java1021stream;\
+\
+
+\f2\b \cf2 import
+\f0\b0 \cf0  java.util.Arrays;\
+
+\f2\b \cf2 import
+\f0\b0 \cf0  java.util.stream.Stream;\
+\
+
+\f2\b \cf2 public
+\f0\b0 \cf0  
+\f2\b \cf2 class
+\f0\b0 \cf0  ReduceMain2 \{\
+\
+	
+\f2\b \cf2 public
+\f0\b0 \cf0  
+\f2\b \cf2 static
+\f0\b0 \cf0  
+\f2\b \cf2 void
+\f0\b0 \cf0  main(String[] \cf4 args\cf0 ) \{\
+		\cf3 //Store 
+\f1 \'b0\'b4\'c3\'bc
+\f0  4
+\f1 \'b0\'b3\'b8\'a6
+\f0  
+\f1 \'c0\'fa\'c0\'e5\'c7\'d2
+\f0  
+\f1 \'bc\'f6
+\f0  
+\f1 \'c0\'d6\'b4\'c2
+\f0  
+\f1 \'b9\'e8\'bf\'ad
+\f0  
+\f1 \'bb\'fd\'bc\'ba
+\f0  \cf0 \
+		Store [] \cf4 ar\cf0  = 
+\f2\b \cf2 new
+\f0\b0 \cf0  Store[4];\
+		\cf4 ar\cf0 [0] = 
+\f2\b \cf2 new
+\f0\b0 \cf0  Store(1, \cf5 "
+\f1 \'b8\'b8\'ba\'b8\'bc\'ba
+\f0 "\cf0 , 53, \cf5 "
+\f1 \'be\'e7\'c3\'b5\'b1\'b8
+\f0  
+\f1 \'b8\'f1\'b5\'bf
+\f0 "\cf0 );\
+		\cf4 ar\cf0 [1] = 
+\f2\b \cf2 new
+\f0\b0 \cf0  Store(2, \cf5 "
+\f1 \'c8\'f1\'b7\'a1\'bc\'ba
+\f0 "\cf0 , 23, \cf5 "
+\f1 \'be\'e7\'c3\'b5\'b1\'b8
+\f0  
+\f1 \'bd\'c5\'c1\'a4\'b5\'bf
+\f0 "\cf0 );\
+		\cf4 ar\cf0 [2] = 
+\f2\b \cf2 new
+\f0\b0 \cf0  Store(3, \cf5 "
+\f1 \'c8\'ab\'ba\'b8\'bc\'ae
+\f0 "\cf0 , 75, \cf5 "
+\f1 \'b0\'ad\'bc\'ad\'b1\'b8
+\f0  
+\f1 \'c8\'ad\'b0\'ee\'b5\'bf
+\f0 "\cf0 );\
+		\cf4 ar\cf0 [3] = 
+\f2\b \cf2 new
+\f0\b0 \cf0  Store(4, \cf5 "
+\f1 \'ba\'cf\'b0\'e6
+\f0 "\cf0 , 17, \cf5 "
+\f1 \'b0\'ad\'bc\'ad\'b1\'b8
+\f0  
+\f1 \'b9\'df\'bb\'ea\'b5\'bf
+\f0 "\cf0 );\
+		\cf3 //
+\f1 \'b9\'e8\'bf\'ad\'c0\'bb
+\f0  
+\f1 \'b0\'a1\'c1\'f6\'b0\'ed
+\f0  
+\f1 \'bd\'ba\'c6\'ae\'b8\'b2
+\f0  
+\f1 \'bb\'fd\'bc\'ba
+\f0 \cf0 \
+		Stream <Store> \cf4 stream\cf0  = Arrays.
+\f4\i stream
+\f0\i0 (\cf4 ar\cf0 );\
+		\
+\cb8 		//\cf4 stream\cf0 .filter((\cf4 store\cf0 )->\{
+\f2\b \cf2 return
+\f0\b0 \cf0  \cf4 store\cf0 .getAddress().substring(0,3)\
+		//.equals(\cf5 "
+\f1 \'be\'e7\'c3\'b5\'b1\'b8
+\f0 "\cf0 );\}).forEach(\cf4 store\cf0  -> System.
+\f3\i\b \cf6 out
+\f0\i0\b0 \cf0 .println(\cf4 store\cf0 ));\
+\cb1 \
+		\cf4 stream\cf0 .filter((\cf4 store\cf0 )->\{\
+			\cf3 //
+\f1 \'b0\'f8\'b9\'e9\'c0\'bb
+\f0  
+\f1 \'b1\'e2\'c1\'d8\'c0\'b8\'b7\'ce
+\f0  
+\f1 \'ba\'d0\'c7\'d2
+\f0  \cf0 \
+			String [] \cf4 ad\cf0  = \cf4 store\cf0 .getAddress().split(\cf5 " "\cf0 );\
+			
+\f2\b \cf2 for
+\f0\b0 \cf0 (String \cf4 imsi\cf0  : \cf4 ad\cf0 ) \{\
+				
+\f2\b \cf2 if
+\f0\b0 \cf0 (\cf4 imsi\cf0 .contentEquals(\cf5 "
+\f1 \'b8\'f1\'b5\'bf
+\f0 "\cf0 )) \{\
+					
+\f2\b \cf2 return
+\f0\b0 \cf0  
+\f2\b \cf2 true
+\f0\b0 \cf0 ;\
+				\}\
+			\}\
+			
+\f2\b \cf2 return
+\f0\b0 \cf0  
+\f2\b \cf2 false
+\f0\b0 \cf0 ;\
+				\}).forEach(\cf4 store\cf0  -> System.
+\f3\i\b \cf6 out
+\f0\i0\b0 \cf0 .println(\cf4 store\cf0 ));\
+	\}\
+\
+\}\
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\partightenfactor0
+
+\f1 \cf0 \
+ =>\'b5\'a5\'c0\'cc\'c5\'cd \'c1\'a4\'b7\'c4(sort)\
+\'b5\'a5\'c0\'cc\'c5\'cd\'b8\'a6 \'c1\'a4\'b7\'c4\'c0\'bb \'c7\'cf\'b7\'c1\'b8\'e9 \'c5\'a9\'b1\'e2 \'ba\'f1\'b1\'b3\'b0\'a1 \'b0\'a1\'b4\'c9\'c7\'d8\'be\'df \'c7\'d1\'b4\'d9. \
+>, >=, <, <=\'bf\'cd \'b0\'b0\'c0\'ba \'bf\'ac\'bb\'e7\'c0\'da\'b8\'a6 \'c0\'cc\'bf\'eb\'c7\'d8\'bc\'ad \'ba\'f1\'b1\'b3\'b0\'a1\'b4\'c9\'c7\'cf\'b0\'c5\'b3\'aa \'bb\'ac\'bc\'c0\'c0\'bb \'c7\'d2 \'bc\'f6 \'c0\'d6\'be\'ee\'be\'df\'c7\'d1\'b4\'d9.\
+\'bc\'fd\'c0\'da\'b5\'a5\'c0\'cc\'c5\'cd\'b4\'c2 \'c5\'a9\'b1\'e2\'ba\'f1\'b1\'b3\'b5\'b5 \'b0\'a1\'b4\'c9\'c7\'cf\'b0\'ed \'bb\'ac\'bc\'c0\'b5\'b5 \'b0\'a1\'b4\'c9\'c7\'cf\'b1\'e2 \'b6\'a7\'b9\'ae\'bf\'a1 \'c1\'a4\'b7\'c4\'c0\'bb \'c7\'d2 \'bc\'f6 \'c0\'d6\'b4\'d9. \
+\
+\'bc\'fd\'c0\'da \'c0\'cc\'bf\'dc\'c0\'c7 \'b5\'a5\'c0\'cc\'c5\'cd\'b4\'c2 \'c5\'a9\'b1\'e2\'ba\'f1\'b1\'b3 \'bf\'ac\'bb\'ea\'c0\'cc\'b3\'aa \'bb\'ac\'bc\'c0\'c0\'cc \'be\'c8\'b5\'c7\'b1\'e2 \'b6\'a7\'b9\'ae\'bf\'a1 \'c1\'a4\'b7\'c4\'c0\'cc \'be\'c8\'b5\'c8\'b4\'d9. \
+\'c7\'c1\'b7\'ce\'b1\'d7\'b7\'a1\'b9\'d6 \'be\'f0\'be\'ee\'c0\'c7 \'c1\'be\'b7\'f9\'bf\'a1 \'b5\'fb\'b6\'f3 \'b5\'c7\'b4\'c2 \'b0\'e6\'bf\'ec\'b5\'b5 \'c0\'d6\'b4\'d9. \
+\
+\'bc\'fd\'c0\'da\'b0\'a1 \'be\'c6\'b4\'d1 \'b0\'e6\'bf\'ec\'b4\'c2 \'c5\'a9\'b1\'e2 \'ba\'f1\'b1\'b3\'b8\'a6 \'c7\'d2 \'bc\'f6 \'c0\'d6\'b4\'c2 \'b8\'de\'bc\'d2\'b5\'e5\'b8\'a6 \'b8\'b8\'b5\'e9\'be\'ee\'c1\'d6\'be\'ee\'be\'df \'c7\'d1\'b4\'d9.\
+\
+\'c0\'da\'b9\'d9\'bf\'a1\'bc\'ad\'b4\'c2 \'c5\'ac\'b7\'a1\'bd\'ba \'be\'c8\'bf\'a1 Comparable \'c0\'ce\'c5\'cd\'c6\'e4\'c0\'cc\'bd\'ba\'b8\'a6 \'b1\'b8\'c7\'f6\'c7\'cf\'b0\'ed int compareTo(<T>other)\'b6\'f3\'b4\'c2 \'b8\'de\'bc\'d2\'b5\'e5\'b8\'a6 \'bf\'c0\'b9\'f6\'b6\'f3\'c0\'cc\'b5\'f9\'c7\'d8\'bc\'ad \'c5\'a9\'b1\'e2 \'ba\'f1\'b1\'b3\'b8\'a6 \'c7\'d2 \'bc\'f6 \'c0\'d6\'b5\'b5\'b7\'cf \'c7\'d2 \'bc\'f6 \'c0\'d6\'b4\'d9. \
+\'c0\'cc \'b8\'de\'bc\'d2\'b5\'e5\'b8\'a6 \'bf\'c0\'b9\'f6\'b6\'f3\'c0\'cc\'b5\'f9 \'c7\'d2 \'b6\'a7\'b4\'c2 \'be\'e7\'bc\'f6\'b0\'a1 \'b8\'ae\'c5\'cf\'b5\'c7\'b8\'e9 \'ba\'f1\'b1\'b3\'c7\'cf\'b4\'c2 \'b0\'b4\'c3\'bc\'b0\'a1 \'c5\'a9\'b4\'d9\'b4\'c2 \'c0\'c7\'b9\'cc\'c0\'cc\'b0\'ed \'c0\'bd\'bc\'f6\'b8\'a6 \'b8\'ae\'c5\'cf\'c7\'cf\'b8\'e9 \'b8\'c5\'b0\'b3\'ba\'af\'bc\'f6\'b7\'ce \'b4\'eb\'c0\'d4\'b5\'c8 \'ba\'f1\'b1\'b3\'b4\'e7\'c7\'cf\'b4\'c2 \'b0\'b4\'c3\'bc\'b0\'a1 \'c5\'a9\'b4\'d9\'b6\'f3\'b4\'c2 \'c0\'c7\'b9\'cc\'c0\'cc\'b4\'d9. \
+\
+Comparator \'c0\'ce\'c5\'cd\'c6\'e4\'c0\'cc\'bd\'ba\'b8\'a6 \'b1\'b8\'c7\'f6\'c7\'d1 \'c5\'ac\'b7\'a1\'bd\'ba\'b8\'a6 \'bb\'fd\'bc\'ba\'c7\'cf\'b0\'ed \'b8\'de\'bc\'d2\'b5\'e5\'b8\'a6 \'b1\'b8\'c7\'f6\'c7\'d8\'c1\'d6\'b8\'e9 \'b5\'c8\'b4\'d9. \
+\'c0\'cc \'b6\'a7 \'b8\'de\'bc\'d2\'b5\'e5\'b4\'c2 \'b8\'c5\'b0\'b3\'ba\'af\'bc\'f6\'b0\'a1 2\'b0\'b3\'c0\'cc\'b0\'ed \'be\'e7\'bc\'f6\'b8\'a6 \'b8\'ae\'c5\'cf\'c7\'cf\'b8\'e9 \'c3\'b9\'b9\'f8\'c2\'b0 \'b8\'c5\'b0\'b3\'ba\'af\'bc\'f6\'b7\'ce \'b4\'eb\'c0\'d4\'b5\'c8 \'b5\'a5\'c0\'cc\'c5\'cd\'b0\'a1 \'c5\'a9\'b4\'d9\'b4\'c2 \'c0\'c7\'b9\'cc\'c0\'cc\'b0\'ed \'c0\'bd\'bc\'f6\'b8\'a6 \'b8\'ae\'c5\'cf\'c7\'cf\'b8\'e9 \'b5\'ce\'b9\'f8\'c2\'b0 \'b5\'a5\'c0\'cc\'c5\'cd\'b0\'a1 \'c5\'a9\'b4\'d9\'b4\'c2 \'c0\'c7\'b9\'cc\'c0\'cc\'b4\'d9. \
+\
+Stream\'bf\'a1\'bc\'ad Comparable \'c0\'ce\'c5\'cd\'c6\'e4\'c0\'cc\'bd\'ba\'b8\'a6 implements\'c7\'d1 \'b0\'b4\'c3\'bc\'c0\'ce \'b0\'e6\'bf\'ec\'bf\'a1\'b4\'c2 sorted()\'b8\'a6 \'c8\'a3\'c3\'e2\'c7\'cf\'b8\'e9 \'bf\'c0\'b8\'a7\'c2\'f7\'bc\'f8 \'c1\'a4\'b7\'c4\'c0\'bb \'c7\'d8\'c1\'d6\'b0\'ed \'b8\'c5\'b0\'b3\'ba\'af\'bc\'f6\'b7\'ce Comparator.reversOrder()\'b8\'a6 \'b4\'eb\'c0\'d4\'c7\'cf\'b8\'e9 \'b3\'bb\'b8\'b2\'c2\'f7\'bc\'f8 \'c1\'a4\'b7\'c4\'c0\'bb \'c7\'d8\'c1\'d8\'b4\'d9.\
+\
+Comparable \'c0\'ce\'c5\'cd\'c6\'e4\'c0\'cc\'bd\'ba\'b8\'a6 implements\'c7\'cf\'c1\'f6 \'be\'ca\'c0\'ba \'b0\'b4\'c3\'bc\'c0\'c7 \'b0\'e6\'bf\'ec\'bf\'a1\'b4\'c2 sorted \'b8\'de\'bc\'d2\'b5\'e5\'bf\'a1 Comparator \'c0\'ce\'c5\'cd\'c6\'e4\'c0\'cc\'bd\'ba\'b8\'a6 \'b1\'b8\'c7\'f6\'c7\'d1 \'b0\'b4\'c3\'bc\'b8\'a6 \'b4\'eb\'c0\'d4\'c7\'d8\'be\'df \'c7\'d1\'b4\'d9. \
+\
+[\'bd\'c7\'bd\'c03] \'bd\'ba\'c6\'ae\'b8\'b2\'c0\'bb \'c0\'cc\'bf\'eb\'c7\'d1 \'c1\'a4\'b7\'c4\
+\'bd\'c7\'bd\'c0\'c0\'bb \'c0\'a7\'c7\'d8 \'bb\'e7\'bf\'eb\'c7\'d2 DTO\'c5\'ac\'b7\'a1\'bd\'ba\'b8\'a6 \'bb\'fd\'bc\'ba \
+- \'b9\'f8\'c8\'a3 : \'c1\'a4\'bc\'f6\'b7\'ce num\
+- \'c0\'cc\'b8\'a7 : \'b9\'ae\'c0\'da\'bf\'ad\'b7\'ce name\
+- \'bc\'ba\'ba\'b0 : \'b9\'ae\'c0\'da\'bf\'ad\'b7\'ce \'b3\'b2\'c0\'da \'b6\'c7\'b4\'c2 \'bf\'a9\'c0\'da\'b8\'b8 \'b0\'ae\'b4\'c2\'b5\'a5 gender(\'c0\'cc\'b7\'b8\'b0\'d4 \'c6\'af\'c1\'a4\'c7\'d1 \'b0\'aa\'b8\'b8\'c0\'bb \'b0\'ae\'b4\'c2 \'c0\'da\'b7\'e1\'c7\'fc\'c0\'bb \'b9\'fc\'c1\'d6\'c7\'fc\'c0\'cc\'b6\'f3\'b0\'ed\'b5\'b5 \'c7\'d1\'b4\'d9.)\
+- \'c1\'a1\'bc\'f6 : \'c1\'a4\'bc\'f6\'b7\'ce score\
+\
+\pard\pardeftab720\partightenfactor0
+
+\f2\b \cf2 package
+\f0\b0 \cf0  java1021stream;\
+\
+
+\f2\b \cf2 public
+\f0\b0 \cf0  
+\f2\b \cf2 class
+\f0\b0 \cf0  Student 
+\f2\b \cf2 implements
+\f0\b0 \cf0  \ul Comparable\ulnone \{\
+	
+\f2\b \cf2 private
+\f0\b0 \cf0  
+\f2\b \cf2 int
+\f0\b0 \cf0  \cf6 num\cf0 ;\
+	
+\f2\b \cf2 private
+\f0\b0 \cf0  String \cf6 name\cf0 ;\
+	
+\f2\b \cf2 private
+\f0\b0 \cf0  String \cf6 gender\cf0 ;\
+	
+\f2\b \cf2 private
+\f0\b0 \cf0  
+\f2\b \cf2 int
+\f0\b0 \cf0  \cf6 score\cf0 ;\
+	\
+	\
+	
+\f2\b \cf2 public
+\f0\b0 \cf0  Student() \{\
+		
+\f2\b \cf2 super
+\f0\b0 \cf0 ();\
+	\}\
+	\
+	
+\f2\b \cf2 public
+\f0\b0 \cf0  Student(
+\f2\b \cf2 int
+\f0\b0 \cf0  \cf4 num\cf0 , String \cf4 name\cf0 , String \cf4 gender\cf0 , 
+\f2\b \cf2 int
+\f0\b0 \cf0  \cf4 score\cf0 ) \{\
+		
+\f2\b \cf2 super
+\f0\b0 \cf0 ();\
+		
+\f2\b \cf2 this
+\f0\b0 \cf0 .\cf6 num\cf0  = \cf4 num\cf0 ;\
+		
+\f2\b \cf2 this
+\f0\b0 \cf0 .\cf6 name\cf0  = \cf4 name\cf0 ;\
+		
+\f2\b \cf2 this
+\f0\b0 \cf0 .\cf6 gender\cf0  = \cf4 gender\cf0 ;\
+		
+\f2\b \cf2 this
+\f0\b0 \cf0 .\cf6 score\cf0  = \cf4 score\cf0 ;\
+	\}\
+\
+	
+\f2\b \cf2 public
+\f0\b0 \cf0  
+\f2\b \cf2 int
+\f0\b0 \cf0  getNum() \{\
+		
+\f2\b \cf2 return
+\f0\b0 \cf0  \cf6 num\cf0 ;\
+	\}\
+\
+	
+\f2\b \cf2 public
+\f0\b0 \cf0  
+\f2\b \cf2 void
+\f0\b0 \cf0  setNum(
+\f2\b \cf2 int
+\f0\b0 \cf0  \cf4 num\cf0 ) \{\
+		
+\f2\b \cf2 this
+\f0\b0 \cf0 .\cf6 num\cf0  = \cf4 num\cf0 ;\
+	\}\
+\
+	
+\f2\b \cf2 public
+\f0\b0 \cf0  String getName() \{\
+		
+\f2\b \cf2 return
+\f0\b0 \cf0  \cf6 name\cf0 ;\
+	\}\
+\
+	
+\f2\b \cf2 public
+\f0\b0 \cf0  
+\f2\b \cf2 void
+\f0\b0 \cf0  setName(String \cf4 name\cf0 ) \{\
+		
+\f2\b \cf2 this
+\f0\b0 \cf0 .\cf6 name\cf0  = \cf4 name\cf0 ;\
+	\}\
+\
+	
+\f2\b \cf2 public
+\f0\b0 \cf0  String getGender() \{\
+		
+\f2\b \cf2 return
+\f0\b0 \cf0  \cf6 gender\cf0 ;\
+	\}\
+\
+	
+\f2\b \cf2 public
+\f0\b0 \cf0  
+\f2\b \cf2 void
+\f0\b0 \cf0  setGender(String \cf4 gender\cf0 ) \{\
+		
+\f2\b \cf2 this
+\f0\b0 \cf0 .\cf6 gender\cf0  = \cf4 gender\cf0 ;\
+	\}\
+\
+	
+\f2\b \cf2 public
+\f0\b0 \cf0  
+\f2\b \cf2 int
+\f0\b0 \cf0  getScore() \{\
+		
+\f2\b \cf2 return
+\f0\b0 \cf0  \cf6 score\cf0 ;\
+	\}\
+\
+	
+\f2\b \cf2 public
+\f0\b0 \cf0  
+\f2\b \cf2 void
+\f0\b0 \cf0  setScore(
+\f2\b \cf2 int
+\f0\b0 \cf0  \cf4 score\cf0 ) \{\
+		
+\f2\b \cf2 this
+\f0\b0 \cf0 .\cf6 score\cf0  = \cf4 score\cf0 ;\
+	\}\
+\
+	\cf7 @Override\cf0 \
+	
+\f2\b \cf2 public
+\f0\b0 \cf0  String toString() \{\
+		
+\f2\b \cf2 return
+\f0\b0 \cf0  \cf5 "Student [num="\cf0  + \cf6 num\cf0  + \cf5 ", name="\cf0  + \cf6 name\cf0  + \cf5 ", gender="\cf0  + \cf6 gender\cf0  + \cf5 ", score="\cf0  + \cf6 score\cf0  + \cf5 "]"\cf0 ;\
+	\}\
+\
+	\cf7 @Override\cf0 \
+	
+\f2\b \cf2 public
+\f0\b0 \cf0  
+\f2\b \cf2 int
+\f0\b0 \cf0  compareTo(Object \cf4 o\cf0 ) \{\
+		\cf3 //
+\f1 \'b8\'c5\'b0\'b3\'ba\'af\'bc\'f6\'b4\'c2
+\f0  
+\f1 \'b4\'d9\'bd\'c5\'c0\'c7
+\f0  
+\f1 \'c0\'da\'b7\'e1\'c7\'fc\'c0\'b8\'b7\'ce
+\f0  
+\f1 \'c7\'fc
+\f0  
+\f1 \'ba\'af\'c8\'af\'c7\'d8\'bc\'ad
+\f0  
+\f1 \'bb\'e7\'bf\'eb
+\f0  \cf0 \
+		Student \cf4 other\cf0  = (Student)\cf4 o\cf0 ;\
+		\
+		\cf3 //return other.score - this.score; -
+\f1 \'bc\'fd\'c0\'da
+\f0 \cf0 \
+		
+\f2\b \cf2 return
+\f0\b0 \cf0  
+\f2\b \cf2 this
+\f0\b0 \cf0 .\cf6 name\cf0 .compareTo(\cf4 other\cf0 .\cf6 name\cf0 ); \cf3 //
+\f1 \'b1\'db\'c0\'da
+\f0 \cf0 \
+	\}\
+\}\
+\
+\
+\pard\pardeftab720\partightenfactor0
+\cf9 Exception in thread "main" \cf10 \ul \ulc10 java.lang.ClassCastException\cf9 \ulnone : java1021stream.Student cannot be cast to java.lang.Comparable\
+\cf11 =>
+\f1 \'c0\'cc\'b7\'b1
+\f0  
+\f1 \'c7\'fc\'c5\'c2\'c0\'c7
+\f0  
+\f1 \'bf\'b9\'bf\'dc
+\f0  
+\f1 \'b8\'de\'bd\'c3\'c1\'f6\'b0\'a1
+\f0  
+\f1 \'b9\'df\'bb\'fd\'c7\'cf\'b8\'e9
+\f0  
+\f1 \'c7\'fc
+\f0  
+\f1 \'ba\'af\'c8\'af
+\f0  
+\f1 \'bf\'b9\'bf\'dc
+\f0  
+\f1 \'b8\'de\'bd\'c3\'c1\'f6\'c0\'ce\'b5\'a5
+\f0  
+\f1 \'b0\'a1\'c0\'e5
+\f0  
+\f1 \'b8\'b6\'c1\'f6\'b8\'b7\'bf\'a1
+\f0  
+\f1 \'b3\'aa\'bf\'c2 \'c0\'ce\'c5\'cd\'c6\'e4\'c0\'cc\'bd\'ba\'b8\'a6 \'b1\'b8\'c7\'f6\'c7\'cf\'c1\'f6 \'be\'ca\'be\'d2\'b4\'d9\'b4\'c2 \'bf\'a1\'b7\'af \'b8\'de\'bd\'c3\'c1\'f6 \cf0 \
+\pard\pardeftab720\partightenfactor0
+
+\f0 \cf0 \
+\
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\partightenfactor0
+
+\f1 \cf0 =>\'b4\'dc\'bc\'f8\'c7\'cf\'b0\'d4 Comparable \'c0\'ce\'c5\'cd\'c6\'e4\'c0\'cc\'bd\'ba\'b8\'a6 \'b1\'b8\'c7\'f6\'c7\'cf\'b4\'c2 \'c7\'fc\'c5\'c2\'b8\'a6 \'c0\'cc\'bf\'eb\'c7\'cf\'b4\'c2 \'b9\'e6\'b9\'fd\'c0\'ba 1\'b0\'a1\'c1\'f6 \'b1\'e2\'c1\'d8\'c0\'b8\'b7\'ce\'b8\'b8 \'c1\'a4\'b7\'c4\'c0\'cc \'b0\'a1\'b4\'c9\'c7\'cf\'b4\'d9. \
+\'b5\'bf\'c0\'fb\'c0\'b8\'b7\'ce \'c1\'a4\'b7\'c4\'b1\'e2\'c1\'d8\'c0\'bb \'ba\'af\'b0\'e6\'c7\'cf\'b7\'c1\'b8\'e9 Comparable \'c0\'ce\'c5\'cd\'c6\'e4\'c0\'cc\'bd\'ba\'b8\'a6 \'c0\'cc\'bf\'eb\'c7\'cf\'b4\'c2 \'b0\'cd\'c0\'cc \'be\'c6\'b4\'cf\'b0\'ed sorted() \'b8\'de\'bc\'d2\'b5\'e5\'bf\'a1 \'c1\'a4\'b7\'c4\'b1\'e2\'c1\'d8\'c0\'bb \'b5\'bf\'c0\'fb\'c0\'b8\'b7\'ce \'b4\'eb\'c0\'d4\'c7\'cf\'b8\'e9 \'b5\'c8\'b4\'d9. \
+\
+\'c7\'cf\'b3\'aa\'c0\'c7 \'b9\'e6\'b9\'fd\'c0\'ba Comparator.comparing(\'c5\'ac\'b7\'a1\'bd\'ba\'c0\'cc\'b8\'a7::\'ba\'f1\'b1\'b3\'c7\'d2\'b8\'de\'bc\'d2\'b5\'e5\'c0\'cc\'b8\'a7)\'c0\'bb \'b4\'eb\'c0\'d4\'c7\'cf\'b0\'ed \'b3\'bb\'b8\'b2\'c2\'f7\'bc\'f8\'c0\'b8\'b7\'ce \'c7\'cf\'b0\'ed\'c0\'da\'c7\'cf\'b8\'e9 \'b5\'da\'bf\'a1 .reversed()\'b8\'a6 \'bf\'ac\'bc\'d3\'c7\'d8\'bc\'ad \'c8\'a3\'c3\'e2\'c7\'cf\'b8\'e9 \'b5\'c8\'b4\'d9. \
+\'b5\'bf\'c0\'cf\'c7\'d1 \'b0\'aa\'c0\'cf \'b6\'a7 \'b4\'d9\'b8\'a5 \'b1\'e2\'c1\'d8\'c0\'bb \'c3\'df\'b0\'a1\'c7\'cf\'b0\'ed\'c0\'da \'c7\'cf\'b8\'e9 \'c0\'cc\'be\'ee\'bc\'ad .thenComparing(\'c5\'ac\'b7\'a1\'bd\'ba\'c0\'cc\'b8\'a7::\'b8\'de\'bc\'d2\'b5\'e5\'c0\'cc\'b8\'a7)\'c0\'bb \'c8\'a3\'c3\'e2\'c7\'cf\'b8\'e9 \'b5\'c8\'b4\'d9. \
+\'c0\'cc \'b6\'a7 \'bf\'ac\'bc\'d3\'c7\'d8\'bc\'ad reversed()\'b8\'a6 \'c0\'fb\'bf\'eb\'c7\'d2 \'bc\'f6 \'be\'f8\'b4\'d9. \
+\'c0\'cc \'b6\'a7\'b4\'c2 thenComparing\'bf\'a1 \'b4\'d9\'bd\'c3 Comparator.comparing()\'c0\'bb \'b8\'b8\'b5\'e9\'be\'ee\'bc\'ad \'b4\'eb\'c0\'d4\'c7\'d8\'be\'df \'c7\'d1\'b4\'d9. \
+\
+\'b4\'d9\'b8\'a5 \'c7\'cf\'b3\'aa\'c0\'c7 \'b9\'e6\'b9\'fd\'c0\'ba Comparator \'c0\'ce\'c5\'cd\'c6\'e4\'c0\'cc\'bd\'ba\'b8\'a6 \'b1\'b8\'c7\'f6\'c7\'d1 \'b0\'b4\'c3\'bc\'b8\'a6 \'c1\'f7\'c1\'a2 \'b4\'eb\'c0\'d4\'c7\'cf\'b4\'c2 \'b0\'cd\'c0\'cc\'b4\'d9. \
+\
+\pard\pardeftab720\partightenfactor0
+
+\f2\b \cf2 package
+\f0\b0 \cf0  java1021stream;\
+\
+
+\f2\b \cf2 import
+\f0\b0 \cf0  java.util.Arrays;\
+
+\f2\b \cf2 import
+\f0\b0 \cf0  java.util.Comparator;\
+
+\f2\b \cf2 import
+\f0\b0 \cf0  java.util.stream.Stream;\
+\
+
+\f2\b \cf2 public
+\f0\b0 \cf0  
+\f2\b \cf2 class
+\f0\b0 \cf0  ReduceMain3 \{\
+\
+	
+\f2\b \cf2 public
+\f0\b0 \cf0  
+\f2\b \cf2 static
+\f0\b0 \cf0  
+\f2\b \cf2 void
+\f0\b0 \cf0  main(String[] \cf4 args\cf0 ) \{\
+		String [] \cf4 ar\cf0  = \{\cf5 "C&C++"\cf0 , \cf5 "JAVA"\cf0 , \cf5 "C#"\cf0 , \
+				\cf5 "JavaScript"\cf0 , \cf5 "Python"\cf0 , \cf5 "R"\cf0 , \cf5 "Kotiln"\cf0 , \
+				\cf5 "Swift"\cf0 , \cf5 "SQL"\cf0 , \cf5 "Haskell"\cf0 , \cf5 "Closure"\cf0 , \
+				\cf5 "Scala"\cf0 , \cf5 "Ruby"\cf0 , \cf5 "Php"\cf0 \};\
+		\cf3 //
+\f1 \'b9\'e8\'bf\'ad\'c0\'bb
+\f0  
+\f1 \'b0\'a1\'c1\'f6\'b0\'ed
+\f0  
+\f1 \'bd\'ba\'c6\'ae\'b8\'b2\'c0\'bb
+\f0  
+\f1 \'bb\'fd\'bc\'ba
+\f0  \cf0 \
+		Stream <String> \cf4 \ul \ulc4 stream\cf0 \ulnone  = Arrays.
+\f4\i stream
+\f0\i0 (\cf4 ar\cf0 );\
+		\
+		\cf3 //String
+\f1 \'c5\'ac\'b7\'a1\'bd\'ba\'b4\'c2
+\f0  Comparable 
+\f1 \'c0\'ce\'c5\'cd\'c6\'e4\'c0\'cc\'bd\'ba\'b8\'a6
+\f0  implements
+\f1 \'c7\'d8\'bc\'ad
+\f0  
+\f1 \'c1\'a4\'b7\'c4\'c0\'cc
+\f0  
+\f1 \'b0\'a1\'b4\'c9\'c7\'cf\'b4\'d9
+\f0 . \cf0 \
+		\cf3 //stream.sorted().forEach(\ul lang\ulnone  -> System.out.println(\ul lang\ulnone ));\cf0 \
+		\
+		\cf3 //
+\f1 \'b3\'bb\'b8\'b2\'c2\'f7\'bc\'f8
+\f0  
+\f1 \'c1\'a4\'b7\'c4
+\f0  \cf0 \
+		\cf3 //stream.sorted(Comparator.reverseOrder()).forEach(\ul lang\ulnone  -> System.out.println(\ul lang\ulnone ));\cf0 \
+		\
+		\cf3 //Student
+\f1 \'c0\'c7
+\f0  
+\f1 \'b9\'e8\'bf\'ad\'c0\'bb
+\f0  
+\f1 \'bb\'fd\'bc\'ba
+\f0  \cf0 \
+		Student [] \cf4 students\cf0  = \{ \
+				
+\f2\b \cf2 new
+\f0\b0 \cf0  Student(1, \cf5 "
+\f1 \'be\'c6\'c0\'cc\'b8\'b0
+\f0 "\cf0 , \cf5 "
+\f1 \'bf\'a9\'c0\'da
+\f0 "\cf0 , 90),\
+				
+\f2\b \cf2 new
+\f0\b0 \cf0  Student(2, \cf5 "
+\f1 \'c2\'f7\'b9\'fc\'b1\'d9
+\f0 "\cf0 , \cf5 "
+\f1 \'b3\'b2\'c0\'da
+\f0 "\cf0 , 88),\
+				
+\f2\b \cf2 new
+\f0\b0 \cf0  Student(3, \cf5 "
+\f1 \'b9\'da\'c1\'a4\'bc\'f7
+\f0 "\cf0 , \cf5 "
+\f1 \'bf\'a9\'c0\'da
+\f0 "\cf0 , 90),\
+				
+\f2\b \cf2 new
+\f0\b0 \cf0  Student(4, \cf5 "
+\f1 \'c0\'cc\'c1\'be\'b9\'fc
+\f0 "\cf0 , \cf5 "
+\f1 \'b3\'b2\'c0\'da
+\f0 "\cf0 , 91),\
+				
+\f2\b \cf2 new
+\f0\b0 \cf0  Student(5, \cf5 "
+\f1 \'bc\'b1\'b5\'bf\'b7\'c4
+\f0 "\cf0 , \cf5 "
+\f1 \'b3\'b2\'c0\'da
+\f0 "\cf0 , 76),\
+				
+\f2\b \cf2 new
+\f0\b0 \cf0  Student(6, \cf5 "
+\f1 \'ba\'b8\'be\'c6
+\f0 "\cf0 , \cf5 "
+\f1 \'bf\'a9\'c0\'da
+\f0 "\cf0 , 92),\
+		\};\
+		\cf3 //
+\f1 \'b9\'e8\'bf\'ad\'c0\'bb
+\f0  
+\f1 \'bd\'ba\'c6\'ae\'b8\'b2\'c0\'b8\'b7\'ce
+\f0  
+\f1 \'bb\'fd\'bc\'ba
+\f0 \cf0 \
+		Stream <Student> \cf4 st\cf0  = Arrays.
+\f4\i stream
+\f0\i0 (\cf4 students\cf0 );\
+		\
+		\cf3 //st.forEach(student -> System.out.println(student)); \cf0 \
+		\
+		\cf3 //
+\f1 \'c0\'cc
+\f0  
+\f1 \'c7\'fc\'c5\'c2\'b8\'a6
+\f0  
+\f1 \'bf\'b9\'bf\'dc\'be\'f8\'c0\'cc
+\f0  
+\f1 \'bb\'e7\'bf\'eb\'c7\'cf\'b0\'ed\'c0\'da
+\f0  
+\f1 \'c7\'cf\'b8\'e9
+\f0  Student
+\f1 \'c5\'ac\'b7\'a1\'bd\'ba
+\f0 (DTO)
+\f1 \'bf\'a1
+\f0  Comparable 
+\f1 \'c0\'ce\'c5\'cd\'c6\'e4\'c0\'cc\'bd\'ba\'b8\'a6
+\f0  
+\f1 \'b1\'b8\'c7\'f6
+\f0  \cf0 \
+		\cf3 //st.sorted().forEach(student -> System.out.println(student));\cf0 \
+		\
+		\cf3 /*\cf0 \
+\cf3 		//Comparator 
+\f1 \'c0\'ce\'c5\'cd\'c6\'e4\'c0\'cc\'bd\'ba\'b8\'a6
+\f0  
+\f1 \'c0\'cc\'bf\'eb\'c7\'d1
+\f0  
+\f1 \'c1\'a4\'b7\'c4
+\f0  \cf0 \
+\cf3 		//score
+\f1 \'c0\'c7
+\f0  
+\f1 \'b3\'bb\'b8\'b2\'c2\'f7\'bc\'f8
+\f0  
+\f1 \'c1\'a4\'b7\'c4
+\f0 \cf0 \
+\cf3 		//.reversed()
+\f1 \'b8\'a6
+\f0  
+\f1 \'bb\'fd\'b7\'ab\'c7\'cf\'b8\'e9
+\f0  
+\f1 \'bf\'c0\'b8\'a7\'c2\'f7\'bc\'f8
+\f0  
+\f1 \'c1\'a4\'b7\'c4
+\f0  \cf0 \
+\cf3 		//score
+\f1 \'b0\'a1
+\f0  
+\f1 \'b0\'b0\'c0\'b8\'b8\'e9
+\f0  
+\f1 \'c0\'cc\'b8\'a7\'c0\'c7
+\f0  
+\f1 \'bf\'c0\'b8\'a7\'c2\'f7\'bc\'f8
+\f0  .thenComparing\cf0 \
+\cf3 		\cf0 \
+\cf3 		st.sorted(Comparator.comparing(Student::getScore)\cf0 \
+\cf3 				.reversed().thenComparing(Student::getName))\cf0 \
+\cf3 		.forEach(student -> System.out.println(student));\cf0 \
+\cf3 		*/\cf0 \
+		\
+		\cf3 //Comparator 
+\f1 \'b0\'b4\'c3\'bc
+\f0  
+\f1 \'c1\'f7\'c1\'a2
+\f0  
+\f1 \'bb\'fd\'bc\'ba
+\f0 \cf0 \
+		Comparator<Student> \cf4 comp\cf0  = 
+\f2\b \cf2 new
+\f0\b0 \cf0  Comparator<Student>() \{\
+\
+			\cf7 @Override\cf0 \
+			
+\f2\b \cf2 public
+\f0\b0 \cf0  
+\f2\b \cf2 int
+\f0\b0 \cf0  compare(Student \cf4 o1\cf0 , Student \cf4 o2\cf0 ) \{\
+				\cf3 //return o1.getScore() - o2.getScore();\cf0 \
+				\
+				\cf3 //
+\f1 \'c1\'a1\'bc\'f6\'b0\'a1
+\f0  
+\f1 \'b0\'b0\'c0\'b8\'b8\'e9
+\f0  
+\f1 \'c0\'cc\'b8\'a7\'c0\'c7
+\f0  
+\f1 \'b3\'bb\'b8\'b2\'c2\'f7\'bc\'f8
+\f0  \cf0 \
+				
+\f2\b \cf2 if
+\f0\b0 \cf0 (\cf4 o1\cf0 .getScore() > \cf4 o2\cf0 .getScore()) \{\
+					
+\f2\b \cf2 return
+\f0\b0 \cf0  1;\
+				\}
+\f2\b \cf2 else
+\f0\b0 \cf0  
+\f2\b \cf2 if
+\f0\b0 \cf0 (\cf4 o1\cf0 .getScore() == \cf4 o2\cf0 .getScore()) \{\
+					
+\f2\b \cf2 return
+\f0\b0 \cf0  \cf4 o2\cf0 .getName().compareTo(\cf4 o1\cf0 .getName());\
+				\}
+\f2\b \cf2 else
+\f0\b0 \cf0  \{\
+					
+\f2\b \cf2 return
+\f0\b0 \cf0  -1;\
+				\}\
+			\}\
+		\};\
+		\cf4 st\cf0 .sorted(\cf4 comp\cf0 ).forEach(\
+				\cf4 student\cf0  -> System.
+\f3\i\b \cf6 out
+\f0\i0\b0 \cf0 .println(\cf4 student\cf0 ));\
+		\
+	\}\
+\}\
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\partightenfactor0
+
+\f1 \cf0 \
+\
+=>map \'c1\'df\'b0\'a3 \'bf\'ac\'bb\'ea\
+mapping\'c0\'c7 \'be\'e0\'c0\'da\'b7\'ce \'b5\'a5\'c0\'cc\'c5\'cd\'b8\'a6 \'ba\'af\'c8\'af\'c7\'d8\'c1\'d6\'b4\'c2 \'bf\'ac\'bb\'ea\'c0\'cc\'b4\'d9.\
+mapTo\'c0\'da\'b7\'e1\'c7\'fc(\'b8\'de\'bc\'d2\'b5\'e5)\'b8\'a6 \'bc\'b3\'c1\'a4\'c7\'cf\'b8\'e9 \'bf\'f8\'b7\'a1\'c0\'c7 \'b5\'a5\'c0\'cc\'c5\'cd\'b0\'a1 \'b8\'de\'bc\'d2\'b5\'e5\'b0\'a1 \'b9\'dd\'c8\'af\'c7\'cf\'b4\'c2 \'b0\'aa\'c0\'b8\'b7\'ce \'ba\'af\'b0\'e6\'b5\'c8\'b4\'d9. \
+\'b8\'b8\'c0\'cf Student\'bf\'a1\'bc\'ad score \'b0\'aa\'b8\'b8 \'bb\'e7\'bf\'eb\'c7\'cf\'b4\'c2 \'b0\'e6\'bf\'ec\'b0\'a1 \'b9\'df\'bb\'fd\'c7\'df\'c0\'bb \'b6\'a7 Student\'bf\'a1\'bc\'ad score\'b8\'b8 \'b2\'a8\'b3\'bb\'bc\'ad \'b4\'d9\'b8\'a5 \'b9\'e8\'bf\'ad\'c0\'cc\'b3\'aa list\'bf\'a1 \'c0\'fa\'c0\'e5\'c7\'cf\'b4\'c2 \'b0\'cd\'c0\'ba \'c0\'da\'bf\'f8\'c0\'c7 \'b3\'b6\'ba\'f1\'b0\'a1 \'b5\'c9 \'bc\'f6 \'c0\'d6\'b4\'d9. \
+\'c7\'ca\'bf\'e4\'c7\'cf\'b4\'d9\'b8\'e9 Student\'c0\'c7 \'b5\'a5\'c0\'cc\'c5\'cd \'c1\'df\'bf\'a1\'bc\'ad score\'bf\'a1\'b8\'b8 \'c1\'a2\'b1\'d9\'c7\'d8\'bc\'ad \'c0\'db\'be\'f7\'c0\'bb \'bc\'f6\'c7\'e0\'c7\'cf\'b5\'b5\'b7\'cf \'c7\'d8\'c1\'d6\'b8\'e9 \'b8\'de\'b8\'f0\'b8\'ae \'b3\'b6\'ba\'f1\'b8\'a6 \'c1\'d9\'c0\'cf \'bc\'f6 \'c0\'d6\'b4\'d9. \
+\
+mapToInt(Student::getScore)\
+\
+\
+\pard\pardeftab720\partightenfactor0
+
+\f2\b \cf2 package
+\f0\b0 \cf0  java1021stream;\
+\
+
+\f2\b \cf2 import
+\f0\b0 \cf0  java.util.Arrays;\
+
+\f2\b \cf2 import
+\f0\b0 \cf0  java.util.stream.Stream;\
+\
+
+\f2\b \cf2 public
+\f0\b0 \cf0  
+\f2\b \cf2 class
+\f0\b0 \cf0  ReduceMain4 \{\
+\
+	
+\f2\b \cf2 public
+\f0\b0 \cf0  
+\f2\b \cf2 static
+\f0\b0 \cf0  
+\f2\b \cf2 void
+\f0\b0 \cf0  main(String[] \cf4 args\cf0 ) \{\
+		\cf3 // Student
+\f1 \'c0\'c7
+\f0  
+\f1 \'b9\'e8\'bf\'ad\'c0\'bb
+\f0  
+\f1 \'bb\'fd\'bc\'ba
+\f0 \cf0 \
+		Student[] \cf4 students\cf0  = \{ \
+				
+\f2\b \cf2 new
+\f0\b0 \cf0  Student(1, \cf5 "
+\f1 \'be\'c6\'c0\'cc\'b8\'b0
+\f0 "\cf0 , \cf5 "
+\f1 \'bf\'a9\'c0\'da
+\f0 "\cf0 , 90), \
+				
+\f2\b \cf2 new
+\f0\b0 \cf0  Student(2, \cf5 "
+\f1 \'c2\'f7\'b9\'fc\'b1\'d9
+\f0 "\cf0 , \cf5 "
+\f1 \'b3\'b2\'c0\'da
+\f0 "\cf0 , 88),\
+				
+\f2\b \cf2 new
+\f0\b0 \cf0  Student(3, \cf5 "
+\f1 \'b9\'da\'c1\'a4\'bc\'f7
+\f0 "\cf0 , \cf5 "
+\f1 \'bf\'a9\'c0\'da
+\f0 "\cf0 , 90), \
+				
+\f2\b \cf2 new
+\f0\b0 \cf0  Student(4, \cf5 "
+\f1 \'c0\'cc\'c1\'be\'b9\'fc
+\f0 "\cf0 , \cf5 "
+\f1 \'b3\'b2\'c0\'da
+\f0 "\cf0 , 91), \
+				
+\f2\b \cf2 new
+\f0\b0 \cf0  Student(5, \cf5 "
+\f1 \'bc\'b1\'b5\'bf\'b7\'c4
+\f0 "\cf0 , \cf5 "
+\f1 \'b3\'b2\'c0\'da
+\f0 "\cf0 , 76),\
+				
+\f2\b \cf2 new
+\f0\b0 \cf0  Student(6, \cf5 "
+\f1 \'ba\'b8\'be\'c6
+\f0 "\cf0 , \cf5 "
+\f1 \'bf\'a9\'c0\'da
+\f0 "\cf0 , 92), \
+				\};\
+		\
+		\cf3 // 
+\f1 \'b9\'e8\'bf\'ad\'c0\'bb
+\f0  
+\f1 \'bd\'ba\'c6\'ae\'b8\'b2\'c0\'b8\'b7\'ce
+\f0  
+\f1 \'bb\'fd\'bc\'ba
+\f0 \cf0 \
+		Stream<Student> \cf4 st\cf0  = Arrays.
+\f4\i stream
+\f0\i0 (\cf4 students\cf0 );\
+\
+		\cf4 st\cf0 .mapToInt(Student::getScore)\
+		.forEach(\cf4 score\cf0 -> System.
+\f3\i\b \cf6 out
+\f0\i0\b0 \cf0 .println(\cf4 score\cf0 ));\
+		\
+		\
+	\}\
+\}\
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\partightenfactor0
+
+\f1 \cf0 =>\'c1\'df\'b0\'a3 \'bf\'ac\'bb\'ea\'bf\'a1\'bc\'ad \'c1\'df\'bf\'e4\'c7\'d1 \'bf\'ac\'bb\'ea\'c0\'ba -\'b5\'a5\'c0\'cc\'c5\'cd \'b0\'a1\'b0\'f8 \'b6\'c7\'b4\'c2 \'c0\'fc\'c3\'b3\'b8\'ae\
+map : \'b5\'a5\'c0\'cc\'c5\'cd\'b8\'a6 \'ba\'af\'c8\'af\
+filter : \'b5\'a5\'c0\'cc\'c5\'cd\'b8\'a6 \'b0\'f1\'b6\'f3\'b3\'bb\'b4\'c0\'b0\'cd\
+sort : \'b5\'a5\'c0\'cc\'c5\'cd\'b8\'a6 \'c1\'a4\'b7\'c4\'c7\'cf\'b4\'c2\'b0\'cd \
+skip : \'b5\'a5\'c0\'cc\'c5\'cd\'b8\'a6 \'b0\'c7\'b3\'ca\'b6\'d9\'b4\'c2 \'b0\'cd\
+limit : \'bf\'f8\'c7\'cf\'b4\'c2 \'b0\'b3\'bc\'f6\'b8\'b8\'c5\'ad \'b0\'f1\'b6\'f3\'b3\'bb\'b4\'c2 \'b0\'cd \
+\
+\'c1\'df\'b0\'a3\'bf\'ac\'bb\'ea\'c0\'ba \'bf\'ac\'bc\'d3\'c7\'d8\'bc\'ad \'bc\'f6\'c7\'e0\'c0\'cc \'b0\'a1\'b4\'c9\'c7\'cf\'b4\'d9 \
+\'c0\'cf\'b9\'dd\'c0\'fb\'c0\'b8\'b7\'ce  skip\'b0\'fa limit\'b0\'a1 \'b8\'b6\'c1\'f6\'b8\'b7\'c0\'cc \'b5\'c9 \'b0\'a1\'b4\'c9\'bc\'ba\'c0\'cc \'b3\'f4\'b4\'d9.\
+\
+
+\fs24 \'b5\'a5\'c0\'cc\'c5\'cd\'b8\'a6 \'bb\'e7\'bf\'eb\'c7\'cf\'b4\'c2 \'b9\'e6\'b9\'fd\
+\'b8\'f1\'c7\'a5\'bc\'b3\'c1\'a4(\'b1\'e2\'c8\'b9) -> \'b5\'a5\'c0\'cc\'c5\'cd\'bc\'f6\'c1\'fd -> \'b0\'a1\'b0\'f8(\'c0\'fc\'c3\'b3\'b8\'ae) -> \'c0\'fa\'c0\'e5 -> \'bb\'e7\'bf\'eb(\'ba\'d0\'bc\'ae) ->\'c3\'e2\'b7\'c2(\'bd\'c3\'b0\'a2\'c8\'ad)\
+\
+*\'b5\'a5\'c0\'cc\'c5\'cd\'bc\'f6\'c1\'fd\
+Database\
+File(Log File)\
+\'ba\'d0\'bb\'ea\'c3\'b3\'b8\'ae\'bd\'c3\'bd\'ba\'c5\'db(Hadoop)\
+=>My Data\
+\
+Open API => \'b3\'b2\'c0\'c7 \'b5\'a5\'c0\'cc\'c5\'cd\
+\
+*\'b0\'a1\'b0\'f8\
+\'ba\'af\'c8\'af \
+\'c7\'ca\'c5\'cd\
+\'c1\'a4\'b7\'c4\
+skip \
+limit
+\fs36 \
+\
+\
+**\'c3\'d6\'c1\'be \'bf\'ac\'bb\'ea \
+=>\'c1\'df\'b0\'a3 \'bf\'ac\'bb\'ea\'b5\'c8 \'b0\'e1\'b0\'fa\'b8\'a6 \'b0\'a1\'c1\'f6\'b0\'ed \'b0\'e1\'b0\'fa\'b8\'a6 \'b8\'b8\'b5\'e9\'be\'ee\'b3\'bb\'b4\'c2 \'bf\'ac\'bb\'ea\'c0\'cc\'b4\'d9.\
+=>\'c7\'d1 \'b9\'f8\'b8\'b8 \'bc\'f6\'c7\'e0 \'b0\'a1\'b4\'c9 \
+1.\'c1\'be\'b7\'f9\
+1)\'b8\'c5\'c4\'aa\'c0\'cc \'b5\'c7\'b4\'c2\'c1\'f6 \'c8\'ae\'c0\'ce\'c7\'d8\'c1\'d6\'b4\'c2 \'b8\'de\'bc\'d2\'b5\'e5 \
+boolean allMatch(\'c7\'d4\'bc\'f6) : \'c7\'d4\'bc\'f6\'b8\'a6 \'bc\'f6\'c7\'e0\'c7\'d1 \'b0\'e1\'b0\'fa\'b0\'a1 \'b8\'f0\'b5\'ce true\'c0\'ce \'b0\'e6\'bf\'ec true\
+boolean anyMatch(\'c7\'d4\'bc\'f6) : \'c7\'d4\'bc\'f6\'b8\'a6 \'bc\'f6\'c7\'e0\'c7\'d1 \'b0\'e1\'b0\'fa\'c1\'df 1\'b0\'b3\'b6\'f3\'b5\'b5 true\'b6\'f3\'b8\'e9 ture\
+boolean noneMatch(\'c7\'d4\'bc\'f6) : \'c7\'d4\'bc\'f6\'b8\'a6 \'bc\'f6\'c7\'e0\'c7\'d1 \'b0\'e1\'b0\'fa \'c1\'df 1\'b0\'b3\'b6\'f3\'b5\'b5 true\'b6\'f3\'b8\'e9 false\
+\
+2)\'c1\'fd\'b0\'e8\'b0\'fc\'b7\'c3 \'b8\'de\'bc\'d2\'b5\'e5 \
+long count() : \'b5\'a5\'c0\'cc\'c5\'cd \'b0\'b3\'bc\'f6\
+OptionalXXX findFirst() : \'c3\'b9\'b9\'f8\'c2\'b0 \'b5\'a5\'c0\'cc\'c5\'cd\
+OptionalXXX max() : \'b0\'a1\'c0\'e5 \'c5\'ab \'b5\'a5\'c0\'cc\'c5\'cd\
+OptionalXXX min() : \'b0\'a1\'c0\'e5 \'c0\'db\'c0\'ba \'b5\'a5\'c0\'cc\'c5\'cd\
+OptionalDouble average() : \'c6\'f2\'b1\'d5\
+OptionalXXX reduce() : \'c7\'d4\'bc\'f6\'b8\'a6 \'bc\'f6\'c7\'e0\'c7\'d1 \'b0\'e1\'b0\'fa \
+Int, long, double sum() : \'c7\'d5\'b0\'e8 \
+\
+3)\'c7\'cf\'b3\'aa\'be\'bf \'bc\'f8\'c2\'f7\'c0\'fb\'c0\'b8\'b7\'ce \'c7\'d4\'bc\'f6\'b8\'a6 \'bc\'f6\'c7\'e0 \
+Void forEach(\'b8\'c5\'b0\'b3\'ba\'af\'bc\'f6\'b0\'a1 1\'b0\'b3\'c0\'ce \'c7\'d4\'bc\'f6)\
+\
+4)\'b0\'e1\'b0\'fa\'b8\'a6 \'b4\'d9\'b8\'a5 \'c7\'fc\'c5\'c2\'b7\'ce \'c0\'fa\'c0\'e5\
+R collect()\
+\
+2. Optional\
+=>NullPointerException\'c0\'c7 \'b9\'df\'bb\'fd\'c0\'bb \'c1\'d9\'c0\'cc\'b1\'e2 \'c0\'a7\'c7\'d8\'bc\'ad \'b5\'ee\'c0\'e5\'c7\'d1 \'c0\'da\'b7\'e1\'c7\'fc \
+=>\'c2\'fc\'c1\'b6\'c7\'fc\'c0\'ba null\'c0\'bb \'c0\'fa\'c0\'e5\'c7\'d2 \'bc\'f6 \'c0\'d6\'b4\'c2\'b5\'a5 \'c2\'fc\'c1\'b6\'c7\'fc\'ba\'af\'bc\'f6\'b0\'a1 \'c0\'da\'bd\'c5\'c0\'c7 \'bc\'d3\'bc\'ba\'c0\'cc\'b3\'aa \'b8\'de\'bc\'d2\'b5\'e5\'b8\'a6 \'c8\'a3\'c3\'e2\'c7\'cf\'b4\'c2 \'b9\'ae\'c0\'e5\'c0\'bb \'bb\'e7\'bf\'eb\'c7\'cf\'b8\'e9 \'c4\'c4\'c6\'c4\'c0\'cf\'c7\'d2 \'b6\'a7\'b4\'c2 \'b9\'ae\'b9\'fd\'b8\'b8 \'b0\'cb\'bb\'e7\'c7\'cf\'b1\'e2 \'b6\'a7\'b9\'ae\'bf\'a1 \'c2\'fc\'c1\'b6\'c7\'fc \'ba\'af\'bc\'f6\'bf\'a1 null\'c0\'cc \'c0\'d6\'b4\'f5\'b6\'f3\'b5\'b5 \'bf\'a1\'b7\'af\'b0\'a1 \'b9\'df\'bb\'fd\'c7\'cf\'c1\'f6 \'be\'ca\'b0\'ed \'bd\'c7\'c7\'e0\'c7\'d2 \'b6\'a7 \'b9\'ae\'c1\'a6\'b0\'a1 \'bb\'fd\'b1\'e4\'b4\'d9. \
+\'c7\'c1\'b7\'ce\'b1\'d7\'b7\'a1\'b9\'d6\'bf\'a1\'bc\'ad\'b4\'c2 \'c0\'cc\'b7\'af\'c7\'d1 \'bf\'b9\'bf\'dc\'b8\'a6 \'b9\'e6\'c1\'f6\'c7\'cf\'b1\'e2 \'c0\'a7\'c7\'d8\'bc\'ad \'c2\'fc\'c1\'b6\'c7\'fc \'b5\'a5\'c0\'cc\'c5\'cd\'c0\'c7 \'b0\'e6\'bf\'ec\'b4\'c2 null \'c3\'bc\'c5\'a9\'b8\'a6 \'c7\'d8\'bc\'ad \'bb\'e7\'bf\'eb\'c7\'df\'b4\'d9. \
+=>\'be\'d6\'c3\'ca\'bf\'a1 null\'c0\'bb \'c0\'fa\'c0\'e5\'c7\'d2 \'bc\'f6 \'c0\'d6\'b4\'c2 \'c2\'fc\'c1\'b6\'c7\'fc\'b0\'fa null\'c0\'bb \'c0\'fa\'c0\'e5\'c7\'d2 \'bc\'f6 \'be\'f8\'b4\'c2 \'c0\'da\'b7\'e1\'c7\'fc\'c0\'bb \'b1\'b8\'ba\'d0\'c7\'d8\'bc\'ad \'bb\'e7\'bf\'eb\'c7\'cf\'b1\'e2 \'c0\'a7\'c7\'d8\'bc\'ad \'b5\'ee\'c0\'e5\'c7\'d1 \'b0\'cd\'c0\'cc Optional \'c0\'cc\'b4\'d9. \
+=>Optional \'c5\'b8\'c0\'d4\'bf\'a1\'bc\'ad \'b5\'a5\'c0\'cc\'c5\'cd\'b8\'a6 \'b0\'a1\'c1\'ae\'bf\'c3 \'b6\'a7\'b4\'c2 \'be\'c6\'b7\'a1 \'b8\'de\'bc\'d2\'b5\'e5 \'c1\'df\'bf\'a1 \'c7\'cf\'b3\'aa\'b8\'a6 \'bb\'e7\'bf\'eb\'c7\'d1\'b4\'d9.\
+T get() : \'b9\'ab\'c1\'b6\'b0\'c7 \'b0\'a1\'c1\'ae\'bf\'c0\'b4\'c2\'b5\'a5 null\'c0\'cc\'b8\'e9 \'bf\'b9\'bf\'dc\'b9\'df\'bb\'fd\
+T orElse(T \'b1\'e2\'ba\'bb\'b0\'aa) : null\'c0\'cc\'b8\'e9 \'b1\'e2\'ba\'bb\'b0\'aa\'c0\'b8\'b7\'ce \'bc\'b3\'c1\'a4\
+Boolean idPresent() : null\'c0\'cc\'b8\'e9 false, null\'c0\'cc \'be\'c6\'b4\'cf\'b8\'e9 true\
+\
+=>swift\'bf\'cd kotlin\'bf\'a1\'bc\'ad \'b5\'a5\'c0\'cc\'c5\'cd \'c5\'b8\'c0\'d4 \'ba\'ce\'ba\'d0\'c0\'cc \'b0\'a1\'c0\'e5 \'c5\'a9\'b0\'d4 \'b9\'d9\'b2\'ef \'ba\'ce\'ba\'d0\
+\
+3.forEach\
+=>\'bd\'ba\'c6\'ae\'b8\'b2\'c0\'c7 \'b8\'f0\'b5\'e7 \'bf\'e4\'bc\'d2\'bf\'a1\'b0\'d4 \'b8\'c5\'b0\'b3\'ba\'af\'bc\'f6\'b7\'ce \'b4\'eb\'c0\'d4\'b5\'c8 \'c7\'d4\'bc\'f6\'b8\'a6 \'bd\'c7\'c7\'e0\'bd\'c3\'c5\'b0\'b4\'c2 \'c3\'d6\'c1\'be \'bf\'ac\'bb\'ea\'c0\'da\'c0\'cc\'b4\'d9.\
+=>\'b8\'c5\'b0\'b3\'ba\'af\'bc\'f6\'b7\'ce \'b4\'eb\'c0\'d4\'b5\'c8 \'c7\'d4\'bc\'f6\'b4\'c2 1\'b0\'b3\'c0\'c7 \'b8\'c5\'b0\'b3\'ba\'af\'bc\'f6\'b8\'a6 \'b0\'a1\'c1\'f6\'b0\'ed \'b8\'ae\'c5\'cf\'c0\'bb \'c7\'cf\'c1\'f6 \'be\'ca\'be\'c6\'be\'df \'c7\'d1\'b4\'d9.\
+=>\'c0\'cc \'b6\'a7 \'b4\'eb\'c0\'d4\'b5\'c7\'b4\'c2 \'b8\'c5\'b0\'b3\'ba\'af\'bc\'f6\'b4\'c2 \'bd\'ba\'c6\'ae\'b8\'b2\'c0\'c7 \'b0\'a2 \'bf\'e4\'bc\'d2\'b5\'e9\'c0\'cc \'bc\'f8\'c2\'f7\'c0\'fb\'c0\'b8\'b7\'ce \'b4\'eb\'c0\'d4\'b5\'c8\'b4\'d9. \
+=>\'c7\'d4\'bc\'f6\'b4\'c2 Consumer \'c0\'ce\'c5\'cd\'c6\'e4\'c0\'cc\'bd\'ba\'b8\'a6 implements\'c7\'d1 \'c5\'ac\'b7\'a1\'bd\'ba\'c0\'c7 \'b0\'b4\'c3\'bc\'b8\'a6 \'b4\'eb\'c0\'d4\'c7\'d8\'b5\'b5 \'b5\'c7\'b0\'ed (\'c0\'da\'b7\'e1\'c7\'fc \'b8\'c5\'b0\'b3\'ba\'af\'bc\'f6)->\{\'bc\'f6\'c7\'e0\'c7\'d2 \'b3\'bb\'bf\'eb;\} \'c7\'fc\'c5\'c2\'c0\'c7 \'b6\'f7\'b4\'d9\'bd\'c4\'c0\'bb \'b4\'eb\'c0\'d4\'c7\'d8\'b5\'b5 \'b5\'c8\'b4\'d9.\
+\'b6\'f7\'b4\'d9\'b8\'a6 \'bb\'e7\'bf\'eb\'c7\'d2 \'b6\'a7 \'b8\'c5\'b0\'b3\'ba\'af\'bc\'f6\'c0\'c7 \'c0\'da\'b7\'e1\'c7\'fc\'c0\'ba \'bb\'fd\'b7\'ab\'c0\'cc \'b0\'a1\'b4\'c9\'c7\'cf\'b0\'ed \'b8\'c5\'b0\'b3\'ba\'af\'bc\'f6\'b0\'a1 1\'b0\'b3\'c0\'ce \'b0\'e6\'bf\'ec\'b4\'c2 ()\'c0\'bb \'bb\'fd\'b7\'ab\'c7\'cf\'b0\'ed \'b8\'c5\'b0\'b3\'ba\'af\'bc\'f6\'c0\'cc\'b8\'a7\'b8\'b8 \'b1\'e2\'c0\'e7\'c7\'d8\'b5\'b5 \'b5\'c8\'b4\'d9. \
+\'bc\'f6\'c7\'e0\'c7\'d2 \'b3\'bb\'bf\'eb\'c0\'bb \'c0\'db\'bc\'ba\'c7\'d2 \'b6\'a7 \'bc\'f6\'c7\'e0\'c7\'d2 \'b3\'bb\'bf\'eb\'c0\'cc 1\'c1\'d9\'c0\'cc\'b8\'e9 \{\}\'b8\'a6 \'bb\'fd\'b7\'ab\'c7\'d8\'b5\'b5 \'b5\'c7\'b0\'ed ;\'b5\'b5 \'bb\'fd\'b7\'ab\'c0\'cc \'b0\'a1\'b4\'c9\'c7\'cf\'b4\'d9.\
+\
+\pard\pardeftab720\partightenfactor0
+
+\f2\b \cf2 package
+\f0\b0 \cf0  java1021stream;\
+\
+
+\f2\b \cf2 import
+\f0\b0 \cf0  java.util.Arrays;\
+
+\f2\b \cf2 import
+\f0\b0 \cf0  java.util.stream.Stream;\
+\
+
+\f2\b \cf2 public
+\f0\b0 \cf0  
+\f2\b \cf2 class
+\f0\b0 \cf0  MapReduceMain1 \{\
+\
+	
+\f2\b \cf2 public
+\f0\b0 \cf0  
+\f2\b \cf2 static
+\f0\b0 \cf0  
+\f2\b \cf2 void
+\f0\b0 \cf0  main(String[] \cf4 args\cf0 ) \{\
+		\cf3 // Student
+\f1 \'c0\'c7
+\f0  
+\f1 \'b9\'e8\'bf\'ad\'c0\'bb
+\f0  
+\f1 \'bb\'fd\'bc\'ba
+\f0 \cf0 \
+		Student[] \cf4 students\cf0  = \{ \
+				
+\f2\b \cf2 new
+\f0\b0 \cf0  Student(1, \cf5 "
+\f1 \'be\'c6\'c0\'cc\'b8\'b0
+\f0 "\cf0 , \cf5 "
+\f1 \'bf\'a9\'c0\'da
+\f0 "\cf0 , 90), \
+				
+\f2\b \cf2 new
+\f0\b0 \cf0  Student(2, \cf5 "
+\f1 \'c2\'f7\'b9\'fc\'b1\'d9
+\f0 "\cf0 , \cf5 "
+\f1 \'b3\'b2\'c0\'da
+\f0 "\cf0 , 88),\
+				
+\f2\b \cf2 new
+\f0\b0 \cf0  Student(3, \cf5 "
+\f1 \'b9\'da\'c1\'a4\'bc\'f7
+\f0 "\cf0 , \cf5 "
+\f1 \'bf\'a9\'c0\'da
+\f0 "\cf0 , 90), \
+				
+\f2\b \cf2 new
+\f0\b0 \cf0  Student(4, \cf5 "
+\f1 \'c0\'cc\'c1\'be\'b9\'fc
+\f0 "\cf0 , \cf5 "
+\f1 \'b3\'b2\'c0\'da
+\f0 "\cf0 , 91), \
+				
+\f2\b \cf2 new
+\f0\b0 \cf0  Student(5, \cf5 "
+\f1 \'bc\'b1\'b5\'bf\'b7\'c4
+\f0 "\cf0 , \cf5 "
+\f1 \'b3\'b2\'c0\'da
+\f0 "\cf0 , 76),\
+				
+\f2\b \cf2 new
+\f0\b0 \cf0  Student(6, \cf5 "
+\f1 \'ba\'b8\'be\'c6
+\f0 "\cf0 , \cf5 "
+\f1 \'bf\'a9\'c0\'da
+\f0 "\cf0 , 92), \
+				\};\
+				\
+		\cf3 // 
+\f1 \'b9\'e8\'bf\'ad\'c0\'bb
+\f0  
+\f1 \'bd\'ba\'c6\'ae\'b8\'b2\'c0\'b8\'b7\'ce
+\f0  
+\f1 \'bb\'fd\'bc\'ba
+\f0 \cf0 \
+		Stream<Student> \cf4 stream\cf0  = Arrays.
+\f4\i stream
+\f0\i0 (\cf4 students\cf0 );\
+		\
+		\cf3 //Map-Reduce Programming\cf0 \
+		\cf3 /*\cf0 \
+\cf3 		stream.filter((Student student) ->\{\cf0 \
+\cf3 			return student.getGender().equals("
+\f1 \'bf\'a9\'c0\'da
+\f0 ");\cf0 \
+\cf3 		\}).forEach((Student student) -> \{\cf0 \
+\cf3 			System.out.println(student);\cf0 \
+\cf3 		\});\cf0 \
+\cf3 		*/\cf0 \
+		\
+		\cf4 stream\cf0 .filter((\cf4 student\cf0 ) ->\{\
+			
+\f2\b \cf2 return
+\f0\b0 \cf0  \cf4 student\cf0 .getGender().equals(\cf5 "
+\f1 \'bf\'a9\'c0\'da
+\f0 "\cf0 );\
+		\}).forEach((\cf4 student\cf0 ) -> \{\
+			System.
+\f3\i\b \cf6 out
+\f0\i0\b0 \cf0 .println(\cf4 student\cf0 );\
+		\});\
+\
+		\
+	\}\
+\}\
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\partightenfactor0
+
+\f1 \cf0 \
+=> \'be\'c8\'b5\'e5\'b7\'ce\'c0\'cc\'b5\'e5\'bf\'cd ios\'c0\'c7 swift\'bf\'a1\'bc\'ad \'b6\'f7\'b4\'d9\'b8\'a6 \'b8\'b9\'c0\'cc \'bb\'e7\'bf\'eb\'c7\'cf\'b1\'e2 \'b6\'a7\'b9\'ae\'bf\'a1 \'b6\'f7\'b4\'d9\'b8\'a6 \'c0\'d0\'c0\'bb \'bc\'f6 \'c0\'d6\'be\'ee\'be\'df \'c7\'d1\'b4\'d9. \
+\'be\'c8\'b5\'e5\'b7\'ce\'c0\'cc\'b5\'e5\'b4\'c2 \'c0\'cc\'ba\'a5\'c6\'ae \'c3\'b3\'b8\'ae\'b8\'a6 \'b4\'eb\'ba\'ce\'ba\'d0 \'b6\'f7\'b4\'d9\'b8\'a6 \'c0\'cc\'bf\'eb\'c7\'d8\'bc\'ad \'c0\'db\'bc\'ba\'c7\'d1\'b4\'d9. \
+swift\'bf\'a1\'bc\'ad\'b4\'c2 \'c4\'dd\'b9\'e9 \'b8\'de\'bc\'d2\'b5\'e5\'b5\'e9\'c0\'bb \'b6\'f7\'b4\'d9\'b7\'ce \'c0\'db\'bc\'ba\'c7\'cf\'b4\'c2 \'b0\'e6\'bf\'ec\'b0\'a1 \'c1\'be\'c1\'be \'c0\'d6\'b4\'d9. \
+\
+\
+\
+\
+\
+\
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\partightenfactor0
+\cf0 \
+\
+\
+\
+\
+\
+\
+\
+\
+\
+}
